@@ -1,0 +1,3 @@
+/Users/usr/prog/C_C++/operators/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/usr/prog/C_C++/operators/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/usr/prog/C_C++/operators/cmake-build-debug/CMakeFiles/operators.dir

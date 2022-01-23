@@ -1,0 +1,5 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/usr/prog/C_C++/operators
+LIBRARIES = /opt/homebrew/Cellar/jsoncpp/1.9.4_1/lib/libjsoncpp.24.dylib;/opt/homebrew/Cellar/jsoncpp/1.9.4_1/lib/libjsoncpp.dylib
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/usr/prog/C_C++/operators/cmake-build-debug
