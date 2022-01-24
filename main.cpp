@@ -9,7 +9,12 @@
 #include <fstream>
 #include <cassert>
 
+//test
+#include "file_io.h"
+
 int main() {
+    // yaml-cpp_test
+    /*
     YAML::Node node;
     assert(node.IsNull());  //初始化的节点是Null类型
     node["key"] = "value";  //当你给它赋值键值对，它转变为Map类型
@@ -34,9 +39,9 @@ int main() {
     //对于Sequence类型，你可以使用它的下标来访问
     //注意这里as<T>是一个模板转换，node_2[0]的type是NodeType::Scalar
 
-    auto it = node_2.begin();
-    for(; it != node_2.end(); it++)
-        std::cout << *(it) << std::endl;
+    //auto it = node_2.begin();
+    //for(; it != node_2.end(); it++)
+    //    std::cout << *(it) << std::endl;
 
     //当然，你也可以用迭代器来访问
     //他们的类型分别是NodeType::Scalar，NodeType::Scalar，NodeType::Scalar，NodeType::Sequence
@@ -50,7 +55,27 @@ int main() {
 
     node.remove(node["seq"][0]);//你可以通过指定一个node来删除它
     node.remove("pointer_to_first_element");//你也可以通过指定key来删除它
+     */
 
 
-    std::cout << node << std::endl;
+    // file_io_test /*
+    YAML::Node test_node1, test_node2;
+    file_io files;
+    test_node1["Ran"].push_back("sjtu");
+    test_node1["Rann"].push_back("sjtu");
+    test_node1["Rannn"].push_back("sjtu");
+    test_node1["Rannnn"].push_back("sjtu");
+
+    files.writeNode(test_node1, "../test.yaml");
+    files.readNode(test_node2, "../test.yaml");
+
+    std::cout << test_node2 <<std::endl;
+    //std::ifstream ifile("test.yaml");
+    //YAML::Node inode = YAML::Load(ifile);//读取来自test.yaml的node文件
+    //std::cout << inode <<std::endl;
+    //YAML::Node inode_2 = YAML::LoadFile("test.yaml");//也可以这样读取文件
+    //std::cout << inode_2["node_2"] <<std::endl;//可以直接用下标访问
+    //for(auto it = inode_2.begin(); it != inode_2.end(); it++)
+    //    std::cout << it->first << it->second << std::endl;//也可以用迭代器访问
+    //*/
 }

@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/operators.dir/file_io.cpp.o"
   "CMakeFiles/operators.dir/main.cpp.o"
   "operators"
   "operators.pdb"

@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/Users/usr/prog/C_C++/operators/file_io.cpp" "/Users/usr/prog/C_C++/operators/cmake-build-debug/CMakeFiles/operators.dir/file_io.cpp.o"
   "/Users/usr/prog/C_C++/operators/main.cpp" "/Users/usr/prog/C_C++/operators/cmake-build-debug/CMakeFiles/operators.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")

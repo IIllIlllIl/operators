@@ -142,6 +142,33 @@ operators/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/operators.dir/build.make CMakeFiles/operators.dir/build
 .PHONY : operators/fast
 
+file_io.o: file_io.cpp.o
+
+.PHONY : file_io.o
+
+# target to build an object file
+file_io.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/operators.dir/build.make CMakeFiles/operators.dir/file_io.cpp.o
+.PHONY : file_io.cpp.o
+
+file_io.i: file_io.cpp.i
+
+.PHONY : file_io.i
+
+# target to preprocess a source file
+file_io.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/operators.dir/build.make CMakeFiles/operators.dir/file_io.cpp.i
+.PHONY : file_io.cpp.i
+
+file_io.s: file_io.cpp.s
+
+.PHONY : file_io.s
+
+# target to generate assembly for a file
+file_io.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/operators.dir/build.make CMakeFiles/operators.dir/file_io.cpp.s
+.PHONY : file_io.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -178,6 +205,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... operators"
+	@echo "... file_io.o"
+	@echo "... file_io.i"
+	@echo "... file_io.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

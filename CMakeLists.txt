@@ -3,7 +3,7 @@ project(operators)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(operators main.cpp)
+add_executable(operators main.cpp file_io.cpp file_io.h)
 
 #json
 INCLUDE_DIRECTORIES(  /opt/homebrew/Cellar/jsoncpp/1.9.4_1/include )
