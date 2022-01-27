@@ -46,6 +46,7 @@ CMakeFiles/operators.dir/file_io.cpp.o: /usr/local/include/yaml-cpp/yaml.h
 
 CMakeFiles/operators.dir/main.cpp.o: ../file_io.h
 CMakeFiles/operators.dir/main.cpp.o: ../main.cpp
+CMakeFiles/operators.dir/main.cpp.o: ../test.h
 CMakeFiles/operators.dir/main.cpp.o: /opt/homebrew/Cellar/jsoncpp/1.9.4_1/include/json/allocator.h
 CMakeFiles/operators.dir/main.cpp.o: /opt/homebrew/Cellar/jsoncpp/1.9.4_1/include/json/config.h
 CMakeFiles/operators.dir/main.cpp.o: /opt/homebrew/Cellar/jsoncpp/1.9.4_1/include/json/forwards.h

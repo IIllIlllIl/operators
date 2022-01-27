@@ -25,6 +25,14 @@ string
 /Users/usr/prog/C_C++/operators/main.cpp
 iostream
 -
+test.h
+/Users/usr/prog/C_C++/operators/test.h
+file_io.h
+/Users/usr/prog/C_C++/operators/file_io.h
+
+/Users/usr/prog/C_C++/operators/test.h
+iostream
+-
 yaml-cpp/yaml.h
 -
 json/json.h

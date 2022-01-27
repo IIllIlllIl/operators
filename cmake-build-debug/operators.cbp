@@ -91,6 +91,9 @@
 		<Unit filename="/Users/usr/prog/C_C++/operators/main.cpp">
 			<Option target="operators"/>
 		</Unit>
+		<Unit filename="/Users/usr/prog/C_C++/operators/test.h">
+			<Option target="operators"/>
+		</Unit>
 		<Unit filename="/Users/usr/prog/C_C++/operators/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
