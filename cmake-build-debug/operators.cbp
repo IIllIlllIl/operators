@@ -82,16 +82,16 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/usr/prog/C_C++/operators/file_io.cpp">
-			<Option target="operators"/>
-		</Unit>
-		<Unit filename="/Users/usr/prog/C_C++/operators/file_io.h">
-			<Option target="operators"/>
-		</Unit>
 		<Unit filename="/Users/usr/prog/C_C++/operators/main.cpp">
 			<Option target="operators"/>
 		</Unit>
-		<Unit filename="/Users/usr/prog/C_C++/operators/test.h">
+		<Unit filename="/Users/usr/prog/C_C++/operators/src/file_io.cpp">
+			<Option target="operators"/>
+		</Unit>
+		<Unit filename="/Users/usr/prog/C_C++/operators/src/file_io.h">
+			<Option target="operators"/>
+		</Unit>
+		<Unit filename="/Users/usr/prog/C_C++/operators/test/test.h">
 			<Option target="operators"/>
 		</Unit>
 		<Unit filename="/Users/usr/prog/C_C++/operators/CMakeLists.txt">

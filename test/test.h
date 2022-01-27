@@ -14,7 +14,7 @@
  */
 #include <fstream>
 #include <cassert>
-#include "file_io.h"
+#include "../src/file_io.h"
 
 #ifndef OPERATORS_TEST_H
 #define OPERATORS_TEST_H
@@ -76,8 +76,8 @@ public:
         test_node1["Rannn"].push_back("sjtu");
         test_node1["Rannnn"].push_back("sjtu");
 
-        files.writeNode(test_node1, "../test.yaml");
-        files.readNode(test_node2, "../test.yaml");
+        files.writeNode(test_node1, "../test/test.yaml");
+        files.readNode(test_node2, "../test/test.yaml");
 
         std::cout << test_node2 <<std::endl;
         //std::ifstream ifile("test.yaml");
@@ -87,7 +87,10 @@ public:
         //std::cout << inode_2["node_2"] <<std::endl;//可以直接用下标访问
         //for(auto it = inode_2.begin(); it != inode_2.end(); it++)
         //    std::cout << it->first << it->second << std::endl;//也可以用迭代器访问
+
+        return 0;
     }
+    // test
 };
 
 
