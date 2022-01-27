@@ -17,6 +17,10 @@ int segment::display() {
     return 0;
 }
 
+std::vector<std::string> segment::get_schema(){
+    return schema;
+}
+
 int segment::add_row(std::vector<std::string> data){
     if(schema.size() != data.size()){
        // error data length
