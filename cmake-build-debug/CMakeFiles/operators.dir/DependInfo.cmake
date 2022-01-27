@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/usr/prog/C_C++/operators/main.cpp" "/Users/usr/prog/C_C++/operators/cmake-build-debug/CMakeFiles/operators.dir/main.cpp.o"
   "/Users/usr/prog/C_C++/operators/src/file_io.cpp" "/Users/usr/prog/C_C++/operators/cmake-build-debug/CMakeFiles/operators.dir/src/file_io.cpp.o"
+  "/Users/usr/prog/C_C++/operators/src/segment.cpp" "/Users/usr/prog/C_C++/operators/cmake-build-debug/CMakeFiles/operators.dir/src/segment.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

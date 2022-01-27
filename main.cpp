@@ -3,5 +3,5 @@
 
 int main() {
     test t;
-    t.test_file_io();
+    t.test_segment();
 }

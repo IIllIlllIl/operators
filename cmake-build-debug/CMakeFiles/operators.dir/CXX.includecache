@@ -6,9 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/Users/usr/prog/C_C++/operators/src/file_io.cpp
-file_io.h
-/Users/usr/prog/C_C++/operators/src/file_io.h
+/Users/usr/prog/C_C++/operators/main.cpp
+iostream
+-
+test/test.h
+/Users/usr/prog/C_C++/operators/test/test.h
 
 /Users/usr/prog/C_C++/operators/src/file_io.h
 yaml-cpp/yaml.h
@@ -25,6 +27,42 @@ fstream
 -
 string
 -
+
+/Users/usr/prog/C_C++/operators/src/segment.cpp
+segment.h
+/Users/usr/prog/C_C++/operators/src/segment.h
+iostream
+-
+
+/Users/usr/prog/C_C++/operators/src/segment.h
+yaml-cpp/yaml.h
+-
+vector
+-
+string
+-
+
+/Users/usr/prog/C_C++/operators/test/test.h
+iostream
+-
+fstream
+-
+cassert
+-
+yaml-cpp/yaml.h
+-
+json/json.h
+-
+json/value.h
+-
+json/writer.h
+-
+json/reader.h
+-
+../src/file_io.h
+/Users/usr/prog/C_C++/operators/src/file_io.h
+../src/segment.h
+/Users/usr/prog/C_C++/operators/src/segment.h
 
 /opt/homebrew/Cellar/jsoncpp/1.9.4_1/include/json/allocator.h
 cstring

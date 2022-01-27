@@ -5,6 +5,8 @@
 // tests for models
 
 #include <iostream>
+#include <fstream>
+#include <cassert>
 #include <yaml-cpp/yaml.h>
 /*
 #include <json/json.h>
@@ -12,9 +14,9 @@
 #include <json/writer.h>
 #include <json/reader.h>
  */
-#include <fstream>
-#include <cassert>
+
 #include "../src/file_io.h"
+#include "../src/segment.h"
 
 #ifndef OPERATORS_TEST_H
 #define OPERATORS_TEST_H
@@ -22,6 +24,18 @@
 
 class test {
 public:
+    // test of segment
+    int test_segment(){
+        std::vector<std::string> schema;
+        schema.push_back("地区");
+        schema.push_back("新增");
+        schema.push_back("累计");
+        schema.push_back("治愈");
+        schema.push_back("死亡");
+        segment seg(schema);
+        seg.display();
+        return 0;
+    }
     // test of yaml-cpp/yaml.h
     int test_yaml_cpp(){
         YAML::Node node;
@@ -51,6 +65,7 @@ public:
         //auto it = node_2.begin();
         //for(; it != node_2.end(); it++)
         //    std::cout << *(it) << std::endl;
+        std::cout<<node_2;
 
         //当然，你也可以用迭代器来访问
         //他们的类型分别是NodeType::Scalar，NodeType::Scalar，NodeType::Scalar，NodeType::Sequence
@@ -61,6 +76,8 @@ public:
         node["node_2"] = node_2;//将node_2作为node的一个子项
         node["pointer_to_first_element"] = node["seq"][0];//你也可以给已有的node设置一个别名，类似于一个指针
         assert(node["pointer_to_first_element"].as<std::string>() == "first element");//你可以通过这个指针访问那个node
+
+        std::cout<<node;
 
         node.remove(node["seq"][0]);//你可以通过指定一个node来删除它
         node.remove("pointer_to_first_element");//你也可以通过指定key来删除它

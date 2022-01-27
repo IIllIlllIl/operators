@@ -91,6 +91,12 @@
 		<Unit filename="/Users/usr/prog/C_C++/operators/src/file_io.h">
 			<Option target="operators"/>
 		</Unit>
+		<Unit filename="/Users/usr/prog/C_C++/operators/src/segment.cpp">
+			<Option target="operators"/>
+		</Unit>
+		<Unit filename="/Users/usr/prog/C_C++/operators/src/segment.h">
+			<Option target="operators"/>
+		</Unit>
 		<Unit filename="/Users/usr/prog/C_C++/operators/test/test.h">
 			<Option target="operators"/>
 		</Unit>

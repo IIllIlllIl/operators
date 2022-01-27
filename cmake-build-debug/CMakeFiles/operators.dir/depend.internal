@@ -4,6 +4,7 @@
 CMakeFiles/operators.dir/main.cpp.o
  /Users/usr/prog/C_C++/operators/main.cpp
  /Users/usr/prog/C_C++/operators/src/file_io.h
+ /Users/usr/prog/C_C++/operators/src/segment.h
  /Users/usr/prog/C_C++/operators/test/test.h
  /opt/homebrew/Cellar/jsoncpp/1.9.4_1/include/json/allocator.h
  /opt/homebrew/Cellar/jsoncpp/1.9.4_1/include/json/config.h
@@ -57,6 +58,40 @@ CMakeFiles/operators.dir/src/file_io.cpp.o
  /opt/homebrew/Cellar/jsoncpp/1.9.4_1/include/json/value.h
  /opt/homebrew/Cellar/jsoncpp/1.9.4_1/include/json/version.h
  /opt/homebrew/Cellar/jsoncpp/1.9.4_1/include/json/writer.h
+ /usr/local/include/yaml-cpp/binary.h
+ /usr/local/include/yaml-cpp/dll.h
+ /usr/local/include/yaml-cpp/emitter.h
+ /usr/local/include/yaml-cpp/emitterdef.h
+ /usr/local/include/yaml-cpp/emittermanip.h
+ /usr/local/include/yaml-cpp/emitterstyle.h
+ /usr/local/include/yaml-cpp/exceptions.h
+ /usr/local/include/yaml-cpp/mark.h
+ /usr/local/include/yaml-cpp/node/convert.h
+ /usr/local/include/yaml-cpp/node/detail/impl.h
+ /usr/local/include/yaml-cpp/node/detail/iterator.h
+ /usr/local/include/yaml-cpp/node/detail/iterator_fwd.h
+ /usr/local/include/yaml-cpp/node/detail/memory.h
+ /usr/local/include/yaml-cpp/node/detail/node.h
+ /usr/local/include/yaml-cpp/node/detail/node_data.h
+ /usr/local/include/yaml-cpp/node/detail/node_iterator.h
+ /usr/local/include/yaml-cpp/node/detail/node_ref.h
+ /usr/local/include/yaml-cpp/node/emit.h
+ /usr/local/include/yaml-cpp/node/impl.h
+ /usr/local/include/yaml-cpp/node/iterator.h
+ /usr/local/include/yaml-cpp/node/node.h
+ /usr/local/include/yaml-cpp/node/parse.h
+ /usr/local/include/yaml-cpp/node/ptr.h
+ /usr/local/include/yaml-cpp/node/type.h
+ /usr/local/include/yaml-cpp/noexcept.h
+ /usr/local/include/yaml-cpp/null.h
+ /usr/local/include/yaml-cpp/ostream_wrapper.h
+ /usr/local/include/yaml-cpp/parser.h
+ /usr/local/include/yaml-cpp/stlemitter.h
+ /usr/local/include/yaml-cpp/traits.h
+ /usr/local/include/yaml-cpp/yaml.h
+CMakeFiles/operators.dir/src/segment.cpp.o
+ /Users/usr/prog/C_C++/operators/src/segment.cpp
+ /Users/usr/prog/C_C++/operators/src/segment.h
  /usr/local/include/yaml-cpp/binary.h
  /usr/local/include/yaml-cpp/dll.h
  /usr/local/include/yaml-cpp/emitter.h

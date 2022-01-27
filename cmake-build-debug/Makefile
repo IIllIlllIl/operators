@@ -196,6 +196,33 @@ src/file_io.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/operators.dir/build.make CMakeFiles/operators.dir/src/file_io.cpp.s
 .PHONY : src/file_io.cpp.s
 
+src/segment.o: src/segment.cpp.o
+
+.PHONY : src/segment.o
+
+# target to build an object file
+src/segment.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/operators.dir/build.make CMakeFiles/operators.dir/src/segment.cpp.o
+.PHONY : src/segment.cpp.o
+
+src/segment.i: src/segment.cpp.i
+
+.PHONY : src/segment.i
+
+# target to preprocess a source file
+src/segment.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/operators.dir/build.make CMakeFiles/operators.dir/src/segment.cpp.i
+.PHONY : src/segment.cpp.i
+
+src/segment.s: src/segment.cpp.s
+
+.PHONY : src/segment.s
+
+# target to generate assembly for a file
+src/segment.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/operators.dir/build.make CMakeFiles/operators.dir/src/segment.cpp.s
+.PHONY : src/segment.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -211,6 +238,9 @@ help:
 	@echo "... src/file_io.o"
 	@echo "... src/file_io.i"
 	@echo "... src/file_io.s"
+	@echo "... src/segment.o"
+	@echo "... src/segment.i"
+	@echo "... src/segment.s"
 .PHONY : help
 
 
