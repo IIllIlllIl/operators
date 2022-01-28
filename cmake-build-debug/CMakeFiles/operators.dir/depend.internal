@@ -91,8 +91,18 @@ CMakeFiles/operators.dir/src/file_io.cpp.o
  /usr/local/include/yaml-cpp/traits.h
  /usr/local/include/yaml-cpp/yaml.h
 CMakeFiles/operators.dir/src/segment.cpp.o
+ /Users/usr/prog/C_C++/operators/src/file_io.h
  /Users/usr/prog/C_C++/operators/src/segment.cpp
  /Users/usr/prog/C_C++/operators/src/segment.h
+ /opt/homebrew/Cellar/jsoncpp/1.9.4_1/include/json/allocator.h
+ /opt/homebrew/Cellar/jsoncpp/1.9.4_1/include/json/config.h
+ /opt/homebrew/Cellar/jsoncpp/1.9.4_1/include/json/forwards.h
+ /opt/homebrew/Cellar/jsoncpp/1.9.4_1/include/json/json.h
+ /opt/homebrew/Cellar/jsoncpp/1.9.4_1/include/json/json_features.h
+ /opt/homebrew/Cellar/jsoncpp/1.9.4_1/include/json/reader.h
+ /opt/homebrew/Cellar/jsoncpp/1.9.4_1/include/json/value.h
+ /opt/homebrew/Cellar/jsoncpp/1.9.4_1/include/json/version.h
+ /opt/homebrew/Cellar/jsoncpp/1.9.4_1/include/json/writer.h
  /usr/local/include/yaml-cpp/binary.h
  /usr/local/include/yaml-cpp/dll.h
  /usr/local/include/yaml-cpp/emitter.h

@@ -6,6 +6,7 @@
 #include <yaml-cpp/yaml.h>
 #include <vector>
 #include <string>
+#include "file_io.h"
 
 #ifndef OPERATORS_SEGMENT_H
 #define OPERATORS_SEGMENT_H
@@ -32,6 +33,8 @@ public:
     // read data
     std::vector<std::string> read_row(int seq);
     std::vector<std::string> read_column(std::string name);
+
+    // io
 };
 
 

@@ -55,6 +55,8 @@ public:
     int test_segment() {
         segment seg(epidemic_schema);
         seg.add_rows(row6);
+        std::cout << seg.read_row(6)[0] << std::endl;
+        //std::cout << seg.read_column("6")[0];
         seg.display();
         return 0;
     }

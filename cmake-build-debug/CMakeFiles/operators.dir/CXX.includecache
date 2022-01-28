@@ -28,6 +28,12 @@ fstream
 string
 -
 
+/Users/usr/prog/C_C++/operators/src/segment.cpp
+segment.h
+/Users/usr/prog/C_C++/operators/src/segment.h
+iostream
+-
+
 /Users/usr/prog/C_C++/operators/src/segment.h
 yaml-cpp/yaml.h
 -
@@ -35,6 +41,8 @@ vector
 -
 string
 -
+file_io.h
+/Users/usr/prog/C_C++/operators/src/file_io.h
 
 /Users/usr/prog/C_C++/operators/test/epidemic.h
 vector

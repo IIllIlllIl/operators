@@ -90,8 +90,18 @@ CMakeFiles/operators.dir/src/file_io.cpp.o: /usr/local/include/yaml-cpp/stlemitt
 CMakeFiles/operators.dir/src/file_io.cpp.o: /usr/local/include/yaml-cpp/traits.h
 CMakeFiles/operators.dir/src/file_io.cpp.o: /usr/local/include/yaml-cpp/yaml.h
 
+CMakeFiles/operators.dir/src/segment.cpp.o: ../src/file_io.h
 CMakeFiles/operators.dir/src/segment.cpp.o: ../src/segment.cpp
 CMakeFiles/operators.dir/src/segment.cpp.o: ../src/segment.h
+CMakeFiles/operators.dir/src/segment.cpp.o: /opt/homebrew/Cellar/jsoncpp/1.9.4_1/include/json/allocator.h
+CMakeFiles/operators.dir/src/segment.cpp.o: /opt/homebrew/Cellar/jsoncpp/1.9.4_1/include/json/config.h
+CMakeFiles/operators.dir/src/segment.cpp.o: /opt/homebrew/Cellar/jsoncpp/1.9.4_1/include/json/forwards.h
+CMakeFiles/operators.dir/src/segment.cpp.o: /opt/homebrew/Cellar/jsoncpp/1.9.4_1/include/json/json.h
+CMakeFiles/operators.dir/src/segment.cpp.o: /opt/homebrew/Cellar/jsoncpp/1.9.4_1/include/json/json_features.h
+CMakeFiles/operators.dir/src/segment.cpp.o: /opt/homebrew/Cellar/jsoncpp/1.9.4_1/include/json/reader.h
+CMakeFiles/operators.dir/src/segment.cpp.o: /opt/homebrew/Cellar/jsoncpp/1.9.4_1/include/json/value.h
+CMakeFiles/operators.dir/src/segment.cpp.o: /opt/homebrew/Cellar/jsoncpp/1.9.4_1/include/json/version.h
+CMakeFiles/operators.dir/src/segment.cpp.o: /opt/homebrew/Cellar/jsoncpp/1.9.4_1/include/json/writer.h
 CMakeFiles/operators.dir/src/segment.cpp.o: /usr/local/include/yaml-cpp/binary.h
 CMakeFiles/operators.dir/src/segment.cpp.o: /usr/local/include/yaml-cpp/dll.h
 CMakeFiles/operators.dir/src/segment.cpp.o: /usr/local/include/yaml-cpp/emitter.h
