@@ -26,10 +26,12 @@ public:
 
     // add data
     int add_row(std::vector<std::string> data);
-    int add_column(std::vector<std::string> data);
+    int add_rows(std::vector<std::vector<std::string>> data);
+    // int add_column(std::vector<std::string> data);
+
     // read data
     std::vector<std::string> read_row(int seq);
-    std::vector<std::string> column(int seq);
+    std::vector<std::string> read_column(std::string name);
 };
 
 

@@ -4,6 +4,7 @@
 CMakeFiles/operators.dir/main.cpp.o: ../main.cpp
 CMakeFiles/operators.dir/main.cpp.o: ../src/file_io.h
 CMakeFiles/operators.dir/main.cpp.o: ../src/segment.h
+CMakeFiles/operators.dir/main.cpp.o: ../test/epidemic.h
 CMakeFiles/operators.dir/main.cpp.o: ../test/test.h
 CMakeFiles/operators.dir/main.cpp.o: /opt/homebrew/Cellar/jsoncpp/1.9.4_1/include/json/allocator.h
 CMakeFiles/operators.dir/main.cpp.o: /opt/homebrew/Cellar/jsoncpp/1.9.4_1/include/json/config.h

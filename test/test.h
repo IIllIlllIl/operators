@@ -17,6 +17,7 @@
 
 #include "../src/file_io.h"
 #include "../src/segment.h"
+#include "../test/epidemic.h"
 
 #ifndef OPERATORS_TEST_H
 #define OPERATORS_TEST_H
@@ -24,15 +25,36 @@
 
 class test {
 public:
+    // data
+    int process_data() {
+        std::ifstream file("../test/data");
+        std::string buffer;
+        std::string output;
+
+        while(file >> buffer) {
+            output.clear();
+            output += "{";
+
+            output += "\"";
+            output += buffer;
+            output += "\"";
+            for (int i = 0; i < 4; i++) {
+                file >> buffer;
+                output += ", \"";
+                output += buffer;
+                output += "\"";
+            }
+
+            output += "},\n";
+            std::cout << output;
+        }
+
+        return 0;
+    }
     // test of segment
-    int test_segment(){
-        std::vector<std::string> schema;
-        schema.push_back("地区");
-        schema.push_back("新增");
-        schema.push_back("累计");
-        schema.push_back("治愈");
-        schema.push_back("死亡");
-        segment seg(schema);
+    int test_segment() {
+        segment seg(epidemic_schema);
+        seg.add_rows(row6);
         seg.display();
         return 0;
     }

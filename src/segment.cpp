@@ -6,8 +6,7 @@
 #include <iostream>
 
 segment::segment(std::vector<std::string> data) {
-    for(int i = 0; i < data.size(); i++){
-        seg.push_back(data[i]);
+    for (int i = 0; i < data.size(); i++){
         schema.push_back(data[i]);
     }
 }
@@ -17,15 +16,26 @@ int segment::display() {
     return 0;
 }
 
-std::vector<std::string> segment::get_schema(){
+std::vector<std::string> segment::get_schema() {
     return schema;
 }
 
-int segment::add_row(std::vector<std::string> data){
-    if(schema.size() != data.size()){
+int segment::add_row(std::vector<std::string> data) {
+    if (schema.size() != data.size()) {
        // error data length
         return -1;
     }
 
+    for (int i = 0; i < schema.size(); i++) {
+        seg[schema[i]].push_back(data[i]);
+    }
+
     return 0;
 }
+
+int segment::add_rows(std::vector<std::vector<std::string>> data) {
+    for (int i = 0; i < data.size(); i++) {
+        add_row(data[i]);
+    }
+}
+
