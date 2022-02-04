@@ -53,11 +53,12 @@ public:
     }
     // test of segment
     int test_segment() {
-        segment seg(epidemic_schema);
+        segment seg("../test/test.yaml");
         seg.add_rows(row6);
-        std::cout << seg.read_row(6)[0] << std::endl;
+        //std::cout << seg.read_row(6)[0] << std::endl;
         //std::cout << seg.read_column("6")[0];
         seg.display();
+        //seg.write_node("../test/test.yaml");
         return 0;
     }
     // test of yaml-cpp/yaml.h
