@@ -21,6 +21,7 @@
 
 #ifndef OPERATORS_TEST_H
 #define OPERATORS_TEST_H
+#define c(x) std::cout<<#x<<": "<<x<<std::endl
 
 
 class test {
@@ -53,11 +54,47 @@ public:
     }
     // test of segment
     int test_segment() {
-        segment seg("../test/test.yaml");
-        seg.add_rows(row6);
-        //std::cout << seg.read_row(6)[0] << std::endl;
-        //std::cout << seg.read_column("6")[0];
-        seg.display();
+        segment s0("../test/test.yaml");
+        segment s1(epidemic_schema, 7);c(s1.add_rows(row6));
+
+        c(s0.read_column("地区")[0]);
+        c(s1.read_column("地区")[0]);
+        c(s0.read_column("地区")[5]);
+        c(s1.read_column("地区")[5]);
+        c(s0.read_column("地区")[6]);
+        c(s1.read_column("地区")[6]);
+
+        c(s0.seg["地区"].IsSequence());
+        c(s1.seg["地区"].IsSequence());
+
+
+        // s0.display();
+        // s1.display();
+
+        // std::cout<<seg.lines()<<std::endl;
+        //seg.write_node("../test/test.yaml");
+        return 0;
+    }
+    // test od add row/rows
+    int test_add_max(){
+        segment s0("../test/test.yaml");
+        segment s1(epidemic_schema, 7);c(s1.add_rows(row6));
+
+        c(s0.seg["地区"].IsSequence());
+        c(s1.seg["地区"].IsSequence());
+
+        c(s0.add_rows(row6));
+        c(s1.add_rows(row6));
+        c(s0.seg["地区"]);
+        c(s1.seg["地区"]);
+
+        c(s0.seg["地区"].IsSequence());
+        c(s1.seg["地区"].IsSequence());
+
+        // s0.display();
+        // s1.display();
+
+        // std::cout<<seg.lines()<<std::endl;
         //seg.write_node("../test/test.yaml");
         return 0;
     }
@@ -109,6 +146,15 @@ public:
 
         return 0;
     }
+    int test_yaml_cpp2() {
+        YAML::Node n;
+        for (int i = 0; i < 6; i++) {
+            n["a"].push_back(i);
+        }
+        c(n["a"][1]);
+        c(n);
+        return 0;
+    }
     // test of file_io.h
     int test_file_io(){
         YAML::Node test_node1, test_node2;
@@ -118,8 +164,8 @@ public:
         test_node1["Rannn"].push_back("sjtu");
         test_node1["Rannnn"].push_back("sjtu");
 
-        files.writeNode(test_node1, "../test/test.yaml");
-        files.readNode(test_node2, "../test/test.yaml");
+        files.writeNode(test_node1, "../test/test0.yaml");
+        files.readNode(test_node2, "../test/test0.yaml");
 
         std::cout << test_node2 <<std::endl;
         //std::ifstream ifile("test.yaml");

@@ -39,6 +39,10 @@ int segment::add_row(std::vector<std::string> data) {
        // error data length
         return -1;
     }
+    if (lines() >= max) {
+        // the number of lines is maxium
+        return -2;
+    }
 
     for (int i = 0; i < schema.size(); i++) {
         seg[schema[i]].push_back(data[i]);
@@ -48,9 +52,13 @@ int segment::add_row(std::vector<std::string> data) {
 }
 
 int segment::add_rows(std::vector<std::vector<std::string>> data) {
+    int res = 0;
     for (int i = 0; i < data.size(); i++) {
-        add_row(data[i]);
+        if((res = add_row(data[i])) != 0) {
+            break;
+        }
     }
+    return res;
 }
 
 std::vector<std::string> segment::read_row(int seq) {
@@ -91,6 +99,10 @@ std::vector<std::string> segment::read_column(std::string name) {
     }
 
     return buffer;
+}
+
+int segment::lines() {
+    return seg[schema[0]].size();
 }
 
 int segment::setMax(int val) {

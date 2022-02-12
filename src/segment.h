@@ -14,6 +14,7 @@
 
 
 class segment {
+public:
     YAML::Node seg;
     std::vector<std::string> schema;
     int max = MAX;
@@ -21,8 +22,8 @@ class segment {
 
 public:
     // create a segment with its schema
-    segment(std::vector<std::string> data);
-    segment(std::vector<std::string> data, int val);
+    segment(std::vector<std::string> schema);
+    segment(std::vector<std::string> schema, int val);
     segment(std::string path);
 
     // display the whole segment
@@ -31,6 +32,8 @@ public:
     std::vector<std::string> get_schema();
     // set max
     int setMax(int val);
+    // show the number of lines in seg
+    int lines();
 
     // add data
     int add_row(std::vector<std::string> data);
