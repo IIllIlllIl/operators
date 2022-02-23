@@ -3,6 +3,7 @@
 //
 // segment.h
 // a segment of a table, which should be small enough for memory
+
 #include <yaml-cpp/yaml.h>
 #include <vector>
 #include <string>
@@ -14,7 +15,6 @@
 
 
 class segment {
-public:
     YAML::Node seg;
     std::vector<std::string> schema;
     int max = MAX;
@@ -30,8 +30,9 @@ public:
     int display();
     // display schema
     std::vector<std::string> get_schema();
-    // set max
+    // max
     int setMax(int val);
+    inline int getMax() {return max;}
     // show the number of lines in seg
     int lines();
 

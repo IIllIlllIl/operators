@@ -196,6 +196,33 @@ src/file_io.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/operators.dir/build.make CMakeFiles/operators.dir/src/file_io.cpp.s
 .PHONY : src/file_io.cpp.s
 
+src/one_pass.o: src/one_pass.cpp.o
+
+.PHONY : src/one_pass.o
+
+# target to build an object file
+src/one_pass.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/operators.dir/build.make CMakeFiles/operators.dir/src/one_pass.cpp.o
+.PHONY : src/one_pass.cpp.o
+
+src/one_pass.i: src/one_pass.cpp.i
+
+.PHONY : src/one_pass.i
+
+# target to preprocess a source file
+src/one_pass.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/operators.dir/build.make CMakeFiles/operators.dir/src/one_pass.cpp.i
+.PHONY : src/one_pass.cpp.i
+
+src/one_pass.s: src/one_pass.cpp.s
+
+.PHONY : src/one_pass.s
+
+# target to generate assembly for a file
+src/one_pass.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/operators.dir/build.make CMakeFiles/operators.dir/src/one_pass.cpp.s
+.PHONY : src/one_pass.cpp.s
+
 src/segment.o: src/segment.cpp.o
 
 .PHONY : src/segment.o
@@ -238,6 +265,9 @@ help:
 	@echo "... src/file_io.o"
 	@echo "... src/file_io.i"
 	@echo "... src/file_io.s"
+	@echo "... src/one_pass.o"
+	@echo "... src/one_pass.i"
+	@echo "... src/one_pass.s"
 	@echo "... src/segment.o"
 	@echo "... src/segment.i"
 	@echo "... src/segment.s"

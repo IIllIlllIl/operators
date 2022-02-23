@@ -18,6 +18,7 @@
 #include "../src/file_io.h"
 #include "../src/segment.h"
 #include "../test/epidemic.h"
+#include "../src/one_pass.h"
 
 #ifndef OPERATORS_TEST_H
 #define OPERATORS_TEST_H
@@ -26,6 +27,13 @@
 
 class test {
 public:
+    // test of one pass
+    int test_op_pro() {
+        segment s("../test/test.yaml");
+        // one_pass::block_project(&s, {"地区", "死亡"}).display();
+
+        return 0;
+    }
     // data
     int process_data() {
         std::ifstream file("../test/data");
@@ -64,10 +72,6 @@ public:
         c(s0.read_column("地区")[6]);
         c(s1.read_column("地区")[6]);
 
-        c(s0.seg["地区"].IsSequence());
-        c(s1.seg["地区"].IsSequence());
-
-
         // s0.display();
         // s1.display();
 
@@ -75,8 +79,9 @@ public:
         //seg.write_node("../test/test.yaml");
         return 0;
     }
-    // test od add row/rows
-    int test_add_max(){
+    // test of add row/rows
+    /*
+        int test_add_max(){
         segment s0("../test/test.yaml");
         segment s1(epidemic_schema, 7);c(s1.add_rows(row6));
 
@@ -97,7 +102,7 @@ public:
         // std::cout<<seg.lines()<<std::endl;
         //seg.write_node("../test/test.yaml");
         return 0;
-    }
+    }*/
     // test of yaml-cpp/yaml.h
     int test_yaml_cpp(){
         YAML::Node node;

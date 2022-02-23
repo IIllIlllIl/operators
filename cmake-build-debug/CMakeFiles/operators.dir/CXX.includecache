@@ -28,6 +28,10 @@ fstream
 string
 -
 
+/Users/usr/prog/C_C++/operators/src/one_pass.h
+segment.h
+/Users/usr/prog/C_C++/operators/src/segment.h
+
 /Users/usr/prog/C_C++/operators/src/segment.h
 yaml-cpp/yaml.h
 -
@@ -65,6 +69,8 @@ json/reader.h
 /Users/usr/prog/C_C++/operators/src/segment.h
 ../test/epidemic.h
 /Users/usr/prog/C_C++/operators/test/epidemic.h
+../src/one_pass.h
+/Users/usr/prog/C_C++/operators/src/one_pass.h
 
 /opt/homebrew/Cellar/jsoncpp/1.9.4_1/include/json/allocator.h
 cstring
