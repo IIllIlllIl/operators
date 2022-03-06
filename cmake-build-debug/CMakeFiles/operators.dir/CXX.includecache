@@ -28,7 +28,13 @@ fstream
 string
 -
 
+/Users/usr/prog/C_C++/operators/src/one_pass.cpp
+one_pass.h
 /Users/usr/prog/C_C++/operators/src/one_pass.h
+
+/Users/usr/prog/C_C++/operators/src/one_pass.h
+cstdlib
+-
 segment.h
 /Users/usr/prog/C_C++/operators/src/segment.h
 
@@ -54,6 +60,8 @@ fstream
 cassert
 -
 yaml-cpp/yaml.h
+-
+sstream
 -
 json/json.h
 -

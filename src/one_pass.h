@@ -4,6 +4,7 @@
 // one_pass.h
 // one pass algorithm on segment
 
+#include <cstdlib>
 #include "segment.h"
 
 #ifndef OPERATORS_ONE_PASS_H
@@ -15,7 +16,10 @@ public:
     // block
     static segment block_project(segment* buffer, std::vector<std::string> schema);
     static segment block_choose(segment* buffer, int (*condition)(std::vector<std::string>));
+    static segment block_product(segment* buf1, segment* buf2);
+    static segment block_sort(segment* buffer);
 };
+
 
 
 #endif //OPERATORS_ONE_PASS_H

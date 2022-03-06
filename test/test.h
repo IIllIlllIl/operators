@@ -8,6 +8,7 @@
 #include <fstream>
 #include <cassert>
 #include <yaml-cpp/yaml.h>
+#include <sstream>
 /*
 #include <json/json.h>
 #include <json/value.h>
@@ -27,10 +28,27 @@
 
 class test {
 public:
+    // test of one pass choose condition
+    static int testCondition(std::vector<std::string> row) {
+        std::stringstream x;
+        double num;
+        x << row[4];
+        // c(row[4]);
+        x >> num;
+        // c(num);
+        if (num > 300000) {
+            return 0;
+        }
+        else {
+            return -1;
+        }
+     }
     // test of one pass
     int test_op_pro() {
         segment s("../test/test.yaml");
         // one_pass::block_project(&s, {"地区", "死亡"}).display();
+        // one_pass::block_choose(&s, testCondition).display();
+        one_pass::block_sort(&s).display();
 
         return 0;
     }
