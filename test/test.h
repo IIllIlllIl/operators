@@ -45,10 +45,17 @@ public:
      }
     // test of one pass
     int test_op_pro() {
-        segment s("../test/test.yaml");
+        //segment s("../test/test.yaml");
         // one_pass::block_project(&s, {"地区", "死亡"}).display();
         // one_pass::block_choose(&s, testCondition).display();
-        one_pass::block_sort(&s, one_pass::cmp).display();
+        // one_pass::block_sort(&s, one_pass::cmp).display();
+
+        segment s0(schema0, 16);c(s0.add_rows(row60));
+        segment s1(schema1, 16);c(s1.add_rows(row61));
+        segment s2(schema2, 32);c(s2.add_rows(row62));
+        // one_pass::block_product(&s0, &s2).display();
+        // one_pass::block_product(&s1, &s2).display();
+        one_pass::block_connect(&s1, &s2, one_pass::equal).display();
 
         return 0;
     }

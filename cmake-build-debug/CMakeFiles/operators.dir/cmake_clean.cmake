@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/operators.dir/src/file_io.cpp.o"
   "CMakeFiles/operators.dir/src/one_pass.cpp.o"
   "CMakeFiles/operators.dir/src/segment.cpp.o"
+  "CMakeFiles/operators.dir/src/table.cpp.o"
   "operators"
   "operators.pdb"
 )

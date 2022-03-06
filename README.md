@@ -8,6 +8,6 @@
 
 整体设计：
 底层存储采用yaml存放关系表。
-segment即为block，是IO的最小单元。
-table为多个segment组成的一张表，用于实际单趟关系算子操作。
+segment即为block，对应一个yml文件，是IO的最小单元。
+table为多个segment组成的一张表，对应一个文件夹，用于实际单趟关系算子操作。
 dtable为分布式table，用于多路归并算子的实现。
