@@ -47,8 +47,17 @@ segment one_pass::block_choose(segment *buffer, int (*condition)(std::vector<std
     return ret;
 }
 
-segment one_pass::block_sort(segment *buffer) {
+segment one_pass::block_sort(segment *buffer, bool (*cmp)(std::vector<std::string>, std::vector<std::string>)) {
     segment ret (buffer->get_schema(), buffer->getMax());
+    std::vector<std::vector<std::string>> vec;
+
+    for (int i = 0; i < buffer->lines(); i++) {
+        vec.push_back(buffer->read_row(i));
+    }
+
+    std::sort(vec.begin(), vec.end(), cmp);
+
+    ret.add_rows(vec);
 
     return ret;
 }

@@ -35,6 +35,8 @@ one_pass.h
 /Users/usr/prog/C_C++/operators/src/one_pass.h
 cstdlib
 -
+sstream
+-
 segment.h
 /Users/usr/prog/C_C++/operators/src/segment.h
 

@@ -48,7 +48,7 @@ public:
         segment s("../test/test.yaml");
         // one_pass::block_project(&s, {"地区", "死亡"}).display();
         // one_pass::block_choose(&s, testCondition).display();
-        one_pass::block_sort(&s).display();
+        one_pass::block_sort(&s, one_pass::cmp).display();
 
         return 0;
     }
