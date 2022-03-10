@@ -20,6 +20,7 @@
 #include "../src/segment.h"
 #include "../test/epidemic.h"
 #include "../src/one_pass.h"
+#include "../src/table.h"
 
 #ifndef OPERATORS_TEST_H
 #define OPERATORS_TEST_H
@@ -28,6 +29,23 @@
 
 class test {
 public:
+    // test of table
+    int test_table() {
+        /*
+        std::string path = "../test/simples/table/tb0";
+        table tb0(path, epidemic_schema, 32, 2);
+        segment b0(epidemic_schema, 32);
+        segment b1(epidemic_schema, 32);
+        b0.add_rows(row64_0);
+        b1.add_rows(row64_1);
+        c(tb0.addBlock(&b0));
+        c(tb0.addBlock(&b1));
+        */
+        std::string path = "../test/simples/table/tb0";
+        table t0(path, 16);
+        c(t0.writeBlock(1));
+        return 0;
+    }
     // test of one pass choose condition
     static int testCondition(std::vector<std::string> row) {
         std::stringstream x;
@@ -45,7 +63,7 @@ public:
      }
     // test of one pass
     int test_op_pro() {
-        //segment s("../test/test.yaml");
+        //segment s("../test/simples/test.yml");
         // one_pass::block_project(&s, {"地区", "死亡"}).display();
         // one_pass::block_choose(&s, testCondition).display();
         // one_pass::block_sort(&s, one_pass::cmp).display();
@@ -61,7 +79,7 @@ public:
     }
     // data
     int process_data() {
-        std::ifstream file("../test/data");
+        std::ifstream file("../test/simples/data");
         std::string buffer;
         std::string output;
 
@@ -87,7 +105,7 @@ public:
     }
     // test of segment
     int test_segment() {
-        segment s0("../test/test.yaml");
+        segment s0("../test/simples/test.yml");
         segment s1(epidemic_schema, 7);c(s1.add_rows(row6));
 
         c(s0.read_column("地区")[0]);
@@ -101,13 +119,13 @@ public:
         // s1.display();
 
         // std::cout<<seg.lines()<<std::endl;
-        //seg.write_node("../test/test.yaml");
+        //seg.write_node("../test/simples/test.yml");
         return 0;
     }
     // test of add row/rows
     /*
         int test_add_max(){
-        segment s0("../test/test.yaml");
+        segment s0("../test/simples/test.yml");
         segment s1(epidemic_schema, 7);c(s1.add_rows(row6));
 
         c(s0.seg["地区"].IsSequence());
@@ -125,7 +143,7 @@ public:
         // s1.display();
 
         // std::cout<<seg.lines()<<std::endl;
-        //seg.write_node("../test/test.yaml");
+        //seg.write_node("../test/simples/test.yml");
         return 0;
     }*/
     // test of yaml-cpp/yaml.h
@@ -198,10 +216,10 @@ public:
         files.readNode(test_node2, "../test/test0.yaml");
 
         std::cout << test_node2 <<std::endl;
-        //std::ifstream ifile("test.yaml");
-        //YAML::Node inode = YAML::Load(ifile);//读取来自test.yaml的node文件
+        //std::ifstream ifile("simples/test.yml");
+        //YAML::Node inode = YAML::Load(ifile);//读取来自test.yml的node文件
         //std::cout << inode <<std::endl;
-        //YAML::Node inode_2 = YAML::LoadFile("test.yaml");//也可以这样读取文件
+        //YAML::Node inode_2 = YAML::LoadFile("simples/test.yml");//也可以这样读取文件
         //std::cout << inode_2["node_2"] <<std::endl;//可以直接用下标访问
         //for(auto it = inode_2.begin(); it != inode_2.end(); it++)
         //    std::cout << it->first << it->second << std::endl;//也可以用迭代器访问

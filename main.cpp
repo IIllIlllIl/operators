@@ -4,5 +4,5 @@
 int main() {
     test t;
 
-    t.test_op_pro();
+    t.test_table();
 }
