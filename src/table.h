@@ -7,10 +7,12 @@
 #include <string>
 #include <utility>
 #include <fstream>
+#include <iostream>
 #include "segment.h"
 
 #ifndef OPERATORS_TABLE_H
 #define OPERATORS_TABLE_H
+#define DISPLAY_GAP 35
 
 
 class table {
@@ -22,6 +24,18 @@ class table {
 
     // get the block path of specified sequence
     inline std::string blk(int seq) {return dir_path + "/" + std::to_string(seq) + ".blk";}
+    void showVec(std::vector<std::string> vec) {
+        for (int  i = 0; i < vec.size(); i++) {
+            for (int j = 0; j < (DISPLAY_GAP - vec[i].length())/2; j++) {
+                    std::cout << " ";
+            }
+            std::cout << vec[i];
+            for (int j = 0; j < (DISPLAY_GAP - vec[i].length())/2; j++) {
+                std::cout << " ";
+            }
+        }
+        std::cout << std::endl;
+    }
 
 public:
     table(std::string path, std::vector<std::string> schema_, int max, int blk)

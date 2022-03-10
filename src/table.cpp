@@ -74,3 +74,26 @@ int table::writeBlock(int seq) {
 
     return 0;
 }
+
+int table::lines() {
+    int count = 0;
+    for (int i = 0; i < current_seq; i++) {
+        count += getBlock(i)->lines();
+    }
+    return count;
+}
+
+int table::display() {
+    std::vector<std::string> row;
+    showVec(schema);
+    for (int i = 0; i < current_seq; i++) {
+        segment* b = getBlock(i);
+        for (int j = 0; j < b->lines(); j ++) {
+            row.clear();
+            row = b->read_row(j);
+            showVec(row);
+        }
+    }
+
+    return 0;
+}

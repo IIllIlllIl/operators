@@ -43,7 +43,8 @@ public:
         */
         std::string path = "../test/simples/table/tb0";
         table t0(path, 16);
-        c(t0.writeBlock(1));
+        t0.display();
+
         return 0;
     }
     // test of one pass choose condition
