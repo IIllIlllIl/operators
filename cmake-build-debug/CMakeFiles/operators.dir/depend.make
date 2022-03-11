@@ -96,6 +96,7 @@ CMakeFiles/operators.dir/src/one_pass.cpp.o: ../src/file_io.h
 CMakeFiles/operators.dir/src/one_pass.cpp.o: ../src/one_pass.cpp
 CMakeFiles/operators.dir/src/one_pass.cpp.o: ../src/one_pass.h
 CMakeFiles/operators.dir/src/one_pass.cpp.o: ../src/segment.h
+CMakeFiles/operators.dir/src/one_pass.cpp.o: ../src/table.h
 CMakeFiles/operators.dir/src/one_pass.cpp.o: /opt/homebrew/Cellar/jsoncpp/1.9.4_1/include/json/allocator.h
 CMakeFiles/operators.dir/src/one_pass.cpp.o: /opt/homebrew/Cellar/jsoncpp/1.9.4_1/include/json/config.h
 CMakeFiles/operators.dir/src/one_pass.cpp.o: /opt/homebrew/Cellar/jsoncpp/1.9.4_1/include/json/forwards.h

@@ -97,3 +97,15 @@ int table::display() {
 
     return 0;
 }
+
+std::string table::getDir() {
+    std::string::size_type i, j;
+
+    for (i = 0; i < dir_path.size(); i++) {
+        if (dir_path[i] == '/') {
+            j = i;
+        }
+    }
+
+    return dir_path.substr(0, j);
+}

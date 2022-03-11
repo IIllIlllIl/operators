@@ -31,8 +31,8 @@ class test {
 public:
     // test of table
     int test_table() {
-        /*
-        std::string path = "../test/simples/table/tb0";
+
+        std::string path = "../test/simples/table/tb1";
         table tb0(path, epidemic_schema, 32, 2);
         segment b0(epidemic_schema, 32);
         segment b1(epidemic_schema, 32);
@@ -40,10 +40,12 @@ public:
         b1.add_rows(row64_1);
         c(tb0.addBlock(&b0));
         c(tb0.addBlock(&b1));
-        */
-        std::string path = "../test/simples/table/tb0";
-        table t0(path, 16);
-        t0.display();
+
+        // std::string path = "../test/simples/table/tb0";
+        // table t0(path, 16);
+        // one_pass::project(&t0, {"地区", "死亡"})->display();
+        // one_pass::project(&t0, {"地区", "a"})->display();
+        // one_pass::choose(&t0, testCondition)->display();
 
         return 0;
     }

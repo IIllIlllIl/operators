@@ -8,6 +8,8 @@
 #include <utility>
 #include <fstream>
 #include <iostream>
+#include <vector>
+#include <sys/stat.h>
 #include "segment.h"
 
 #ifndef OPERATORS_TABLE_H
@@ -39,7 +41,10 @@ class table {
 
 public:
     table(std::string path, std::vector<std::string> schema_, int max, int blk)
-        : dir_path(std::move(path)), schema(std::move(schema_)), default_max(max), max_blk(blk) { current_seq = 0;}
+        : dir_path(std::move(path)), schema(std::move(schema_)), default_max(max), max_blk(blk) {
+        current_seq = 0;
+        mkdir(dir_path.c_str(), 0777);
+    }
     table(std::string path, int max_blk);
 
     // display all info
@@ -52,6 +57,8 @@ public:
     inline void setMaxBlk(int val) {max_blk = val;}
     inline int getMaxBlk() const {return max_blk;}
     inline int getCurrentSeq() const {return current_seq;}
+    inline std::string getPath() const {return dir_path;}
+    std::string getDir();
 
     // get number of lines of all blocks
     int lines();

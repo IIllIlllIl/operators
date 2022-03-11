@@ -4,9 +4,9 @@
 
 #include "one_pass.h"
 
-
-segment one_pass::block_project(segment* buffer, std::vector<std::string> schema) {
-    segment ret (schema, buffer->getMax());
+// block
+segment* one_pass::block_project(segment* buffer, std::vector<std::string> schema) {
+    segment* ret = new segment(schema, buffer->getMax());
     std::vector<std::vector<std::string>> rows;
     std::vector<std::string> vec;
 
@@ -14,7 +14,7 @@ segment one_pass::block_project(segment* buffer, std::vector<std::string> schema
         vec = buffer->read_column(schema[i]);
         if (vec[0] == "$error") {
             // unexpected schema
-            return ret;
+            return nullptr;
         }
         else {
             for (int j = 0; j < vec.size(); j++) {
@@ -27,20 +27,20 @@ segment one_pass::block_project(segment* buffer, std::vector<std::string> schema
             }
         }
     }
-    ret.add_rows(rows);
+    ret->add_rows(rows);
 
     return ret;
 }
 
-segment one_pass::block_choose(segment *buffer, int (*condition)(std::vector<std::string>)) {
-    segment ret (buffer->get_schema(), buffer->getMax());
+segment* one_pass::block_choose(segment *buffer, int (*condition)(std::vector<std::string>)) {
+    segment* ret  = new segment(buffer->get_schema(), buffer->getMax());
     std::vector<std::string> vec;
 
     for (int i = 0; i < buffer->lines(); i++) {
         vec = buffer->read_row(i);
         // condition() == 0
         if (condition(vec) == 0) {
-            ret.add_row(vec);
+            ret->add_row(vec);
         }
     }
 
@@ -153,6 +153,23 @@ segment one_pass::block_connect(segment *buf1, segment *buf2,
     ret.add_rows(rows);
 
     return ret;
+}
+
+// table
+table *one_pass::project(table *t0, std::vector<std::string> schema) {
+    table* res = new table(t0->getPath() + ".res", schema, t0->getDefaultMax(), t0->getMaxBlk());
+    for (int i = 0; i < t0->getCurrentSeq(); i++) {
+        res->addBlock(block_project(t0->getBlock(i), schema));
+    }
+    return res;
+}
+
+table *one_pass::choose(table *t0, int (*condition)(std::vector<std::string>)) {
+    table* res = new table(t0->getPath() + ".res", t0->getSchema(), t0->getDefaultMax(), t0->getMaxBlk());
+    for (int i = 0; i < t0->getCurrentSeq(); i++) {
+        res->addBlock(block_choose(t0->getBlock(i), condition));
+    }
+    return res;
 }
 
 

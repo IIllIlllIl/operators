@@ -28,6 +28,10 @@ fstream
 string
 -
 
+/Users/usr/prog/C_C++/operators/src/one_pass.cpp
+one_pass.h
+/Users/usr/prog/C_C++/operators/src/one_pass.h
+
 /Users/usr/prog/C_C++/operators/src/one_pass.h
 cstdlib
 -
@@ -37,6 +41,8 @@ iostream
 -
 segment.h
 /Users/usr/prog/C_C++/operators/src/segment.h
+table.h
+/Users/usr/prog/C_C++/operators/src/table.h
 
 /Users/usr/prog/C_C++/operators/src/segment.h
 yaml-cpp/yaml.h
@@ -48,10 +54,6 @@ string
 file_io.h
 /Users/usr/prog/C_C++/operators/src/file_io.h
 
-/Users/usr/prog/C_C++/operators/src/table.cpp
-table.h
-/Users/usr/prog/C_C++/operators/src/table.h
-
 /Users/usr/prog/C_C++/operators/src/table.h
 string
 -
@@ -60,6 +62,10 @@ utility
 fstream
 -
 iostream
+-
+vector
+-
+sys/stat.h
 -
 segment.h
 /Users/usr/prog/C_C++/operators/src/segment.h
