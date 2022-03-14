@@ -31,7 +31,7 @@ class test {
 public:
     // test of table
     int test_table() {
-
+        /*
         std::string path = "../test/simples/table/tb1";
         table tb0(path, epidemic_schema, 32, 2);
         segment b0(epidemic_schema, 32);
@@ -40,12 +40,24 @@ public:
         b1.add_rows(row64_1);
         c(tb0.addBlock(&b0));
         c(tb0.addBlock(&b1));
+         */
 
-        // std::string path = "../test/simples/table/tb0";
-        // table t0(path, 16);
+        std::string path0 = "../test/simples/table/tb0";
+        std::string path1 = "../test/simples/table/tb1";
+        std::string path2 = "../test/simples/table/tb2";
+        std::string path3 = "../test/simples/table/tb3";
+        std::string path_d = "../test/simples/table/tb_dup";
+        table t0(path0, 16);
+        table t1(path1, 64);
+        table t2(path2, 128);
+        table t3(path3, 16);
+        table td(path_d, 16);
         // one_pass::project(&t0, {"地区", "死亡"})->display();
         // one_pass::project(&t0, {"地区", "a"})->display();
         // one_pass::choose(&t0, testCondition)->display();
+        // one_pass::product(&t1, &t3)->display();
+        // one_pass::connect(&t2, &t3, one_pass::equal)->display();
+        one_pass::deduplicate(&td)->display();
 
         return 0;
     }
