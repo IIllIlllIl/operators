@@ -4,5 +4,5 @@
 int main() {
     test t;
 
-    t.test_table();
+    t.test_table_js();
 }

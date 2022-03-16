@@ -1,0 +1,5 @@
+{
+   "$max" : "32",
+   "$schema" : [ "place", "place", "place", "place" ]
+}
+

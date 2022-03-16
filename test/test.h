@@ -7,18 +7,20 @@
 #include <iostream>
 #include <fstream>
 #include <cassert>
-#include <yaml-cpp/yaml.h>
+
 #include <sstream>
 /*
 #include <json/json.h>
 #include <json/value.h>
 #include <json/writer.h>
 #include <json/reader.h>
- */
+#include <yaml-cpp/yaml.h>
+*/
 
 #include "../src/file_io.h"
 #include "../src/segment.h"
 #include "../test/epidemic.h"
+#include "../test/en.h"
 #include "../src/one_pass.h"
 #include "../src/table.h"
 
@@ -29,6 +31,25 @@
 
 class test {
 public:
+    // json part
+    int test_table_js() {
+        /*
+        std::string path = "../test/simples/table/tb1";
+        table tb0(path, epidemic_schema, 32, 2);
+        segment b0(epidemic_schema, 32);
+        segment b1(epidemic_schema, 32);
+        b0.add_rows(row64_0);
+        b1.add_rows(row64_1);
+        c(tb0.addBlock(&b0));
+        c(tb0.addBlock(&b1));
+         */
+
+        std::string path0 = "../test/json/table/t0";
+        table t0(path0, 16);
+        // one_pass::project(&t0, {"region", "new"})->display();
+        one_pass::choose(&t0, testCondition)->display();
+        return 0;
+    }
     // test of table
     int test_table() {
         /*
@@ -118,6 +139,106 @@ public:
 
         return 0;
     }
+    // test fo json
+    std::string ConstructJsonString()
+    {
+        Json::Value rootValue = Json::objectValue;
+        rootValue["encoding"] = "UTF-8";
+        rootValue["plug-ins"] = Json::arrayValue;
+        rootValue["plug-ins"].append("python");
+        rootValue["plug-ins"].append("c++");
+        rootValue["plug-ins"].append("ruby");
+        rootValue["indent"] = Json::objectValue;
+        rootValue["indent"]["length"] = 3;
+        rootValue["indent"]["use_space"] = true;
+
+        return Json::FastWriter().write(rootValue);
+    }
+
+    void ParseJsonString(const std::string& document)
+    {
+        Json::Reader reader;
+        Json::Value rootValue;
+        if (!reader.parse(document, rootValue))
+        {
+            return;
+        }
+
+        if (!rootValue.isObject())
+        {
+            return;
+        }
+
+        if (rootValue.isMember("encoding") && rootValue["encoding"].isString())
+        {
+            printf("encoding is %s \n", rootValue["encoding"].asString().c_str());
+        }
+
+        if (rootValue.isMember("plug-ins") && rootValue["plug-ins"].isArray())
+        {
+            for (Json::ArrayIndex i = 0; i < rootValue["plug-ins"].size(); ++i)
+            {
+                if (rootValue["plug-ins"][i].isString())
+                {
+                    printf("plug-ins %d : %s \n", i, rootValue["plug-ins"][i].asString().c_str());
+                }
+            }
+        }
+
+        if (rootValue.isMember("indent") && rootValue["indent"].isObject())
+        {
+            if (rootValue["indent"].isMember("length") && rootValue["indent"]["length"].isInt())
+            {
+                printf("indent length is %d \n", rootValue["indent"]["length"].asInt());
+            }
+
+            if (rootValue["indent"].isMember("use_space") && rootValue["indent"]["use_space"].isBool())
+            {
+                printf("indent use_space is %s \n", rootValue["indent"]["use_space"].asBool() ? "true":"false");
+            }
+        }
+    }
+
+    int test_of_json() {
+        std::string document = ConstructJsonString();
+        printf(document.c_str());
+        printf("\n");
+        ParseJsonString(document);
+        return 0;
+    }
+
+    int test_of_jsReadFile() {
+        Json::Value root;
+        file_io::readNode(root, "../test/json/test.json");
+        std::string name = root["name"].asString(); // 实际字段保存在这里, 因为知道是什么类型，所以直接用asString()，没有进行类型的判断
+        int age = root["age"].asInt(); // 这是整型，转化是指定类型
+        std::cout << name << ":" << age << "\n";
+        return 0;
+    }
+
+    int test_of_jsWriteFile() {
+        Json::Value root;
+        root["$schema"].append("place");
+        root["$schema"].append("place");
+        root["$schema"].append("place");
+        root["$schema"].append("place");
+        root["$max"] = "32";
+        file_io::writeNode(root, "../test/json/blk.json");
+        return 0;
+    }
+
+    int create_js_blk() {
+        segment b0(epidemic_schema_E, 32);
+        segment b1(epidemic_schema_E, 32);
+        b0.add_rows(row64_0_E);
+        b1.add_rows(row64_1_E);
+        b0.write_node("../test/json/table/t0/0.blk");
+        b1.write_node("../test/json/table/t0/1.blk");
+        segment b2("../test/json/table/t0/0.blk");
+        b2.display();
+        return 0;
+    }
+
     // test of segment
     int test_segment() {
         segment s0("../test/simples/test.yml");
@@ -161,6 +282,7 @@ public:
         //seg.write_node("../test/simples/test.yml");
         return 0;
     }*/
+    /*
     // test of yaml-cpp/yaml.h
     int test_yaml_cpp(){
         YAML::Node node;
@@ -241,6 +363,7 @@ public:
 
         return 0;
     }
+    */
     // test
 };
 

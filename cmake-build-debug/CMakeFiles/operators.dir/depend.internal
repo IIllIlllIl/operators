@@ -7,6 +7,7 @@ CMakeFiles/operators.dir/main.cpp.o
  /Users/usr/prog/C_C++/operators/src/one_pass.h
  /Users/usr/prog/C_C++/operators/src/segment.h
  /Users/usr/prog/C_C++/operators/src/table.h
+ /Users/usr/prog/C_C++/operators/test/en.h
  /Users/usr/prog/C_C++/operators/test/epidemic.h
  /Users/usr/prog/C_C++/operators/test/test.h
  /opt/homebrew/Cellar/jsoncpp/1.9.4_1/include/json/allocator.h
@@ -18,6 +19,45 @@ CMakeFiles/operators.dir/main.cpp.o
  /opt/homebrew/Cellar/jsoncpp/1.9.4_1/include/json/value.h
  /opt/homebrew/Cellar/jsoncpp/1.9.4_1/include/json/version.h
  /opt/homebrew/Cellar/jsoncpp/1.9.4_1/include/json/writer.h
+ /usr/local/include/Availability.h
+ /usr/local/include/AvailabilityInternal.h
+ /usr/local/include/AvailabilityVersions.h
+ /usr/local/include/arm/_types.h
+ /usr/local/include/arm/types.h
+ /usr/local/include/i386/_types.h
+ /usr/local/include/i386/types.h
+ /usr/local/include/machine/_types.h
+ /usr/local/include/machine/types.h
+ /usr/local/include/sys/_posix_availability.h
+ /usr/local/include/sys/_pthread/_pthread_types.h
+ /usr/local/include/sys/_symbol_aliasing.h
+ /usr/local/include/sys/_types.h
+ /usr/local/include/sys/_types/_blkcnt_t.h
+ /usr/local/include/sys/_types/_blksize_t.h
+ /usr/local/include/sys/_types/_dev_t.h
+ /usr/local/include/sys/_types/_filesec_t.h
+ /usr/local/include/sys/_types/_gid_t.h
+ /usr/local/include/sys/_types/_ino64_t.h
+ /usr/local/include/sys/_types/_ino_t.h
+ /usr/local/include/sys/_types/_int16_t.h
+ /usr/local/include/sys/_types/_int32_t.h
+ /usr/local/include/sys/_types/_int64_t.h
+ /usr/local/include/sys/_types/_int8_t.h
+ /usr/local/include/sys/_types/_intptr_t.h
+ /usr/local/include/sys/_types/_mode_t.h
+ /usr/local/include/sys/_types/_nlink_t.h
+ /usr/local/include/sys/_types/_off_t.h
+ /usr/local/include/sys/_types/_s_ifmt.h
+ /usr/local/include/sys/_types/_time_t.h
+ /usr/local/include/sys/_types/_timespec.h
+ /usr/local/include/sys/_types/_u_int16_t.h
+ /usr/local/include/sys/_types/_u_int32_t.h
+ /usr/local/include/sys/_types/_u_int64_t.h
+ /usr/local/include/sys/_types/_u_int8_t.h
+ /usr/local/include/sys/_types/_uid_t.h
+ /usr/local/include/sys/_types/_uintptr_t.h
+ /usr/local/include/sys/cdefs.h
+ /usr/local/include/sys/stat.h
  /usr/local/include/yaml-cpp/binary.h
  /usr/local/include/yaml-cpp/dll.h
  /usr/local/include/yaml-cpp/emitter.h
@@ -61,37 +101,61 @@ CMakeFiles/operators.dir/src/file_io.cpp.o
  /opt/homebrew/Cellar/jsoncpp/1.9.4_1/include/json/value.h
  /opt/homebrew/Cellar/jsoncpp/1.9.4_1/include/json/version.h
  /opt/homebrew/Cellar/jsoncpp/1.9.4_1/include/json/writer.h
- /usr/local/include/yaml-cpp/binary.h
- /usr/local/include/yaml-cpp/dll.h
- /usr/local/include/yaml-cpp/emitter.h
- /usr/local/include/yaml-cpp/emitterdef.h
- /usr/local/include/yaml-cpp/emittermanip.h
- /usr/local/include/yaml-cpp/emitterstyle.h
- /usr/local/include/yaml-cpp/exceptions.h
- /usr/local/include/yaml-cpp/mark.h
- /usr/local/include/yaml-cpp/node/convert.h
- /usr/local/include/yaml-cpp/node/detail/impl.h
- /usr/local/include/yaml-cpp/node/detail/iterator.h
- /usr/local/include/yaml-cpp/node/detail/iterator_fwd.h
- /usr/local/include/yaml-cpp/node/detail/memory.h
- /usr/local/include/yaml-cpp/node/detail/node.h
- /usr/local/include/yaml-cpp/node/detail/node_data.h
- /usr/local/include/yaml-cpp/node/detail/node_iterator.h
- /usr/local/include/yaml-cpp/node/detail/node_ref.h
- /usr/local/include/yaml-cpp/node/emit.h
- /usr/local/include/yaml-cpp/node/impl.h
- /usr/local/include/yaml-cpp/node/iterator.h
- /usr/local/include/yaml-cpp/node/node.h
- /usr/local/include/yaml-cpp/node/parse.h
- /usr/local/include/yaml-cpp/node/ptr.h
- /usr/local/include/yaml-cpp/node/type.h
- /usr/local/include/yaml-cpp/noexcept.h
- /usr/local/include/yaml-cpp/null.h
- /usr/local/include/yaml-cpp/ostream_wrapper.h
- /usr/local/include/yaml-cpp/parser.h
- /usr/local/include/yaml-cpp/stlemitter.h
- /usr/local/include/yaml-cpp/traits.h
- /usr/local/include/yaml-cpp/yaml.h
+CMakeFiles/operators.dir/src/multiway_merge.cpp.o
+ /Users/usr/prog/C_C++/operators/src/file_io.h
+ /Users/usr/prog/C_C++/operators/src/multiway_merge.cpp
+ /Users/usr/prog/C_C++/operators/src/multiway_merge.h
+ /Users/usr/prog/C_C++/operators/src/one_pass.h
+ /Users/usr/prog/C_C++/operators/src/segment.h
+ /Users/usr/prog/C_C++/operators/src/table.h
+ /opt/homebrew/Cellar/jsoncpp/1.9.4_1/include/json/allocator.h
+ /opt/homebrew/Cellar/jsoncpp/1.9.4_1/include/json/config.h
+ /opt/homebrew/Cellar/jsoncpp/1.9.4_1/include/json/forwards.h
+ /opt/homebrew/Cellar/jsoncpp/1.9.4_1/include/json/json.h
+ /opt/homebrew/Cellar/jsoncpp/1.9.4_1/include/json/json_features.h
+ /opt/homebrew/Cellar/jsoncpp/1.9.4_1/include/json/reader.h
+ /opt/homebrew/Cellar/jsoncpp/1.9.4_1/include/json/value.h
+ /opt/homebrew/Cellar/jsoncpp/1.9.4_1/include/json/version.h
+ /opt/homebrew/Cellar/jsoncpp/1.9.4_1/include/json/writer.h
+ /usr/local/include/Availability.h
+ /usr/local/include/AvailabilityInternal.h
+ /usr/local/include/AvailabilityVersions.h
+ /usr/local/include/arm/_types.h
+ /usr/local/include/arm/types.h
+ /usr/local/include/i386/_types.h
+ /usr/local/include/i386/types.h
+ /usr/local/include/machine/_types.h
+ /usr/local/include/machine/types.h
+ /usr/local/include/sys/_posix_availability.h
+ /usr/local/include/sys/_pthread/_pthread_types.h
+ /usr/local/include/sys/_symbol_aliasing.h
+ /usr/local/include/sys/_types.h
+ /usr/local/include/sys/_types/_blkcnt_t.h
+ /usr/local/include/sys/_types/_blksize_t.h
+ /usr/local/include/sys/_types/_dev_t.h
+ /usr/local/include/sys/_types/_filesec_t.h
+ /usr/local/include/sys/_types/_gid_t.h
+ /usr/local/include/sys/_types/_ino64_t.h
+ /usr/local/include/sys/_types/_ino_t.h
+ /usr/local/include/sys/_types/_int16_t.h
+ /usr/local/include/sys/_types/_int32_t.h
+ /usr/local/include/sys/_types/_int64_t.h
+ /usr/local/include/sys/_types/_int8_t.h
+ /usr/local/include/sys/_types/_intptr_t.h
+ /usr/local/include/sys/_types/_mode_t.h
+ /usr/local/include/sys/_types/_nlink_t.h
+ /usr/local/include/sys/_types/_off_t.h
+ /usr/local/include/sys/_types/_s_ifmt.h
+ /usr/local/include/sys/_types/_time_t.h
+ /usr/local/include/sys/_types/_timespec.h
+ /usr/local/include/sys/_types/_u_int16_t.h
+ /usr/local/include/sys/_types/_u_int32_t.h
+ /usr/local/include/sys/_types/_u_int64_t.h
+ /usr/local/include/sys/_types/_u_int8_t.h
+ /usr/local/include/sys/_types/_uid_t.h
+ /usr/local/include/sys/_types/_uintptr_t.h
+ /usr/local/include/sys/cdefs.h
+ /usr/local/include/sys/stat.h
 CMakeFiles/operators.dir/src/one_pass.cpp.o
  /Users/usr/prog/C_C++/operators/src/file_io.h
  /Users/usr/prog/C_C++/operators/src/one_pass.cpp
@@ -107,37 +171,45 @@ CMakeFiles/operators.dir/src/one_pass.cpp.o
  /opt/homebrew/Cellar/jsoncpp/1.9.4_1/include/json/value.h
  /opt/homebrew/Cellar/jsoncpp/1.9.4_1/include/json/version.h
  /opt/homebrew/Cellar/jsoncpp/1.9.4_1/include/json/writer.h
- /usr/local/include/yaml-cpp/binary.h
- /usr/local/include/yaml-cpp/dll.h
- /usr/local/include/yaml-cpp/emitter.h
- /usr/local/include/yaml-cpp/emitterdef.h
- /usr/local/include/yaml-cpp/emittermanip.h
- /usr/local/include/yaml-cpp/emitterstyle.h
- /usr/local/include/yaml-cpp/exceptions.h
- /usr/local/include/yaml-cpp/mark.h
- /usr/local/include/yaml-cpp/node/convert.h
- /usr/local/include/yaml-cpp/node/detail/impl.h
- /usr/local/include/yaml-cpp/node/detail/iterator.h
- /usr/local/include/yaml-cpp/node/detail/iterator_fwd.h
- /usr/local/include/yaml-cpp/node/detail/memory.h
- /usr/local/include/yaml-cpp/node/detail/node.h
- /usr/local/include/yaml-cpp/node/detail/node_data.h
- /usr/local/include/yaml-cpp/node/detail/node_iterator.h
- /usr/local/include/yaml-cpp/node/detail/node_ref.h
- /usr/local/include/yaml-cpp/node/emit.h
- /usr/local/include/yaml-cpp/node/impl.h
- /usr/local/include/yaml-cpp/node/iterator.h
- /usr/local/include/yaml-cpp/node/node.h
- /usr/local/include/yaml-cpp/node/parse.h
- /usr/local/include/yaml-cpp/node/ptr.h
- /usr/local/include/yaml-cpp/node/type.h
- /usr/local/include/yaml-cpp/noexcept.h
- /usr/local/include/yaml-cpp/null.h
- /usr/local/include/yaml-cpp/ostream_wrapper.h
- /usr/local/include/yaml-cpp/parser.h
- /usr/local/include/yaml-cpp/stlemitter.h
- /usr/local/include/yaml-cpp/traits.h
- /usr/local/include/yaml-cpp/yaml.h
+ /usr/local/include/Availability.h
+ /usr/local/include/AvailabilityInternal.h
+ /usr/local/include/AvailabilityVersions.h
+ /usr/local/include/arm/_types.h
+ /usr/local/include/arm/types.h
+ /usr/local/include/i386/_types.h
+ /usr/local/include/i386/types.h
+ /usr/local/include/machine/_types.h
+ /usr/local/include/machine/types.h
+ /usr/local/include/sys/_posix_availability.h
+ /usr/local/include/sys/_pthread/_pthread_types.h
+ /usr/local/include/sys/_symbol_aliasing.h
+ /usr/local/include/sys/_types.h
+ /usr/local/include/sys/_types/_blkcnt_t.h
+ /usr/local/include/sys/_types/_blksize_t.h
+ /usr/local/include/sys/_types/_dev_t.h
+ /usr/local/include/sys/_types/_filesec_t.h
+ /usr/local/include/sys/_types/_gid_t.h
+ /usr/local/include/sys/_types/_ino64_t.h
+ /usr/local/include/sys/_types/_ino_t.h
+ /usr/local/include/sys/_types/_int16_t.h
+ /usr/local/include/sys/_types/_int32_t.h
+ /usr/local/include/sys/_types/_int64_t.h
+ /usr/local/include/sys/_types/_int8_t.h
+ /usr/local/include/sys/_types/_intptr_t.h
+ /usr/local/include/sys/_types/_mode_t.h
+ /usr/local/include/sys/_types/_nlink_t.h
+ /usr/local/include/sys/_types/_off_t.h
+ /usr/local/include/sys/_types/_s_ifmt.h
+ /usr/local/include/sys/_types/_time_t.h
+ /usr/local/include/sys/_types/_timespec.h
+ /usr/local/include/sys/_types/_u_int16_t.h
+ /usr/local/include/sys/_types/_u_int32_t.h
+ /usr/local/include/sys/_types/_u_int64_t.h
+ /usr/local/include/sys/_types/_u_int8_t.h
+ /usr/local/include/sys/_types/_uid_t.h
+ /usr/local/include/sys/_types/_uintptr_t.h
+ /usr/local/include/sys/cdefs.h
+ /usr/local/include/sys/stat.h
 CMakeFiles/operators.dir/src/segment.cpp.o
  /Users/usr/prog/C_C++/operators/src/file_io.h
  /Users/usr/prog/C_C++/operators/src/segment.cpp
@@ -151,37 +223,6 @@ CMakeFiles/operators.dir/src/segment.cpp.o
  /opt/homebrew/Cellar/jsoncpp/1.9.4_1/include/json/value.h
  /opt/homebrew/Cellar/jsoncpp/1.9.4_1/include/json/version.h
  /opt/homebrew/Cellar/jsoncpp/1.9.4_1/include/json/writer.h
- /usr/local/include/yaml-cpp/binary.h
- /usr/local/include/yaml-cpp/dll.h
- /usr/local/include/yaml-cpp/emitter.h
- /usr/local/include/yaml-cpp/emitterdef.h
- /usr/local/include/yaml-cpp/emittermanip.h
- /usr/local/include/yaml-cpp/emitterstyle.h
- /usr/local/include/yaml-cpp/exceptions.h
- /usr/local/include/yaml-cpp/mark.h
- /usr/local/include/yaml-cpp/node/convert.h
- /usr/local/include/yaml-cpp/node/detail/impl.h
- /usr/local/include/yaml-cpp/node/detail/iterator.h
- /usr/local/include/yaml-cpp/node/detail/iterator_fwd.h
- /usr/local/include/yaml-cpp/node/detail/memory.h
- /usr/local/include/yaml-cpp/node/detail/node.h
- /usr/local/include/yaml-cpp/node/detail/node_data.h
- /usr/local/include/yaml-cpp/node/detail/node_iterator.h
- /usr/local/include/yaml-cpp/node/detail/node_ref.h
- /usr/local/include/yaml-cpp/node/emit.h
- /usr/local/include/yaml-cpp/node/impl.h
- /usr/local/include/yaml-cpp/node/iterator.h
- /usr/local/include/yaml-cpp/node/node.h
- /usr/local/include/yaml-cpp/node/parse.h
- /usr/local/include/yaml-cpp/node/ptr.h
- /usr/local/include/yaml-cpp/node/type.h
- /usr/local/include/yaml-cpp/noexcept.h
- /usr/local/include/yaml-cpp/null.h
- /usr/local/include/yaml-cpp/ostream_wrapper.h
- /usr/local/include/yaml-cpp/parser.h
- /usr/local/include/yaml-cpp/stlemitter.h
- /usr/local/include/yaml-cpp/traits.h
- /usr/local/include/yaml-cpp/yaml.h
 CMakeFiles/operators.dir/src/table.cpp.o
  /Users/usr/prog/C_C++/operators/src/file_io.h
  /Users/usr/prog/C_C++/operators/src/segment.h
@@ -196,34 +237,42 @@ CMakeFiles/operators.dir/src/table.cpp.o
  /opt/homebrew/Cellar/jsoncpp/1.9.4_1/include/json/value.h
  /opt/homebrew/Cellar/jsoncpp/1.9.4_1/include/json/version.h
  /opt/homebrew/Cellar/jsoncpp/1.9.4_1/include/json/writer.h
- /usr/local/include/yaml-cpp/binary.h
- /usr/local/include/yaml-cpp/dll.h
- /usr/local/include/yaml-cpp/emitter.h
- /usr/local/include/yaml-cpp/emitterdef.h
- /usr/local/include/yaml-cpp/emittermanip.h
- /usr/local/include/yaml-cpp/emitterstyle.h
- /usr/local/include/yaml-cpp/exceptions.h
- /usr/local/include/yaml-cpp/mark.h
- /usr/local/include/yaml-cpp/node/convert.h
- /usr/local/include/yaml-cpp/node/detail/impl.h
- /usr/local/include/yaml-cpp/node/detail/iterator.h
- /usr/local/include/yaml-cpp/node/detail/iterator_fwd.h
- /usr/local/include/yaml-cpp/node/detail/memory.h
- /usr/local/include/yaml-cpp/node/detail/node.h
- /usr/local/include/yaml-cpp/node/detail/node_data.h
- /usr/local/include/yaml-cpp/node/detail/node_iterator.h
- /usr/local/include/yaml-cpp/node/detail/node_ref.h
- /usr/local/include/yaml-cpp/node/emit.h
- /usr/local/include/yaml-cpp/node/impl.h
- /usr/local/include/yaml-cpp/node/iterator.h
- /usr/local/include/yaml-cpp/node/node.h
- /usr/local/include/yaml-cpp/node/parse.h
- /usr/local/include/yaml-cpp/node/ptr.h
- /usr/local/include/yaml-cpp/node/type.h
- /usr/local/include/yaml-cpp/noexcept.h
- /usr/local/include/yaml-cpp/null.h
- /usr/local/include/yaml-cpp/ostream_wrapper.h
- /usr/local/include/yaml-cpp/parser.h
- /usr/local/include/yaml-cpp/stlemitter.h
- /usr/local/include/yaml-cpp/traits.h
- /usr/local/include/yaml-cpp/yaml.h
+ /usr/local/include/Availability.h
+ /usr/local/include/AvailabilityInternal.h
+ /usr/local/include/AvailabilityVersions.h
+ /usr/local/include/arm/_types.h
+ /usr/local/include/arm/types.h
+ /usr/local/include/i386/_types.h
+ /usr/local/include/i386/types.h
+ /usr/local/include/machine/_types.h
+ /usr/local/include/machine/types.h
+ /usr/local/include/sys/_posix_availability.h
+ /usr/local/include/sys/_pthread/_pthread_types.h
+ /usr/local/include/sys/_symbol_aliasing.h
+ /usr/local/include/sys/_types.h
+ /usr/local/include/sys/_types/_blkcnt_t.h
+ /usr/local/include/sys/_types/_blksize_t.h
+ /usr/local/include/sys/_types/_dev_t.h
+ /usr/local/include/sys/_types/_filesec_t.h
+ /usr/local/include/sys/_types/_gid_t.h
+ /usr/local/include/sys/_types/_ino64_t.h
+ /usr/local/include/sys/_types/_ino_t.h
+ /usr/local/include/sys/_types/_int16_t.h
+ /usr/local/include/sys/_types/_int32_t.h
+ /usr/local/include/sys/_types/_int64_t.h
+ /usr/local/include/sys/_types/_int8_t.h
+ /usr/local/include/sys/_types/_intptr_t.h
+ /usr/local/include/sys/_types/_mode_t.h
+ /usr/local/include/sys/_types/_nlink_t.h
+ /usr/local/include/sys/_types/_off_t.h
+ /usr/local/include/sys/_types/_s_ifmt.h
+ /usr/local/include/sys/_types/_time_t.h
+ /usr/local/include/sys/_types/_timespec.h
+ /usr/local/include/sys/_types/_u_int16_t.h
+ /usr/local/include/sys/_types/_u_int32_t.h
+ /usr/local/include/sys/_types/_u_int64_t.h
+ /usr/local/include/sys/_types/_u_int8_t.h
+ /usr/local/include/sys/_types/_uid_t.h
+ /usr/local/include/sys/_types/_uintptr_t.h
+ /usr/local/include/sys/cdefs.h
+ /usr/local/include/sys/stat.h

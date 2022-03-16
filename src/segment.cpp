@@ -5,6 +5,7 @@
 #include "segment.h"
 #include <iostream>
 
+/* yaml
 segment::segment(std::vector<std::string> data) {
     for (int i = 0; i < data.size(); i++){
         schema.push_back(data[i]);
@@ -124,5 +125,112 @@ int segment::read_node(std::string path) {
     std::vector<std::string> buffer = read_column("$schema");
     schema.assign(buffer.begin(), buffer.end());
     max = seg["$max"].as<int>();
+    return 0;
+}*/
+
+// json
+segment::segment(std::vector<std::string> data) {
+    for (int i = 0; i < data.size(); i++){
+        schema.push_back(data[i]);
+        seg["$schema"].append(data[i]);
+    }
+    seg["$max"] = max;
+}
+segment::segment(std::vector<std::string> data, int val) {
+    for (int i = 0; i < data.size(); i++){
+        schema.push_back(data[i]);
+        seg["$schema"].append(data[i]);
+    }
+    max = val;
+    seg["$max"] = max;
+}
+segment::segment(std::string path) {
+    read_node(path);
+}
+
+int segment::display() {
+    Json::StyledWriter writer;
+    std::cout<< writer.write(seg) << std::endl;
+    return 0;
+}
+
+
+int segment::add_row(std::vector<std::string> data) {
+    if (schema.size() != data.size()) {
+        // error data length
+        return -1;
+    }
+    if (lines() >= max) {
+        // the number of lines is maxium
+        return -2;
+    }
+
+    for (int i = 0; i < schema.size(); i++) {
+        seg[schema[i]].append(data[i]);
+    }
+
+    return 0;
+}
+
+int segment::add_rows(std::vector<std::vector<std::string>> data) {
+    int res = 0;
+    for (int i = 0; i < data.size(); i++) {
+        if((res = add_row(data[i])) != 0) {
+            break;
+        }
+    }
+    return res;
+}
+
+std::vector<std::string> segment::read_row(int seq) {
+    if (!seg[schema[0]][seq]) {
+        // out of range
+        return {"$error", "out of range"};
+    }
+
+    std::vector<std::string> buffer;
+    for (int i = 0; i < schema.size(); i++) {
+        buffer.push_back(seg[schema[i]][seq].asString());
+    }
+
+    return buffer;
+}
+
+std::vector<std::string> segment::read_column(std::string name) {
+    int flag_name_exist = 1;
+    if (name.at(0) == '$') {
+        flag_name_exist = 0;
+    }
+    else{
+        for (int i = 0; i < schema.size(); i++) {
+            if (name == schema[i]) {
+                flag_name_exist = 0;
+                break;
+            }
+        }
+    }
+    if (flag_name_exist){
+        // name is not in schema
+        return {"$error", "not exist"};
+    }
+
+    std::vector<std::string> buffer;
+    for (int i = 0; seg[name][i]; i++) {
+        buffer.push_back(seg[name][i].asString());
+    }
+
+    return buffer;
+}
+
+int segment::write_node(std::string path) {
+    file_io::writeNode(seg, path);
+    return 0;
+}
+
+int segment::read_node(std::string path) {
+    file_io::readNode(seg, path);
+    std::vector<std::string> buffer = read_column("$schema");
+    schema.assign(buffer.begin(), buffer.end());
+    max = seg["$max"].asInt();
     return 0;
 }

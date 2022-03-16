@@ -196,6 +196,33 @@ src/file_io.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/operators.dir/build.make CMakeFiles/operators.dir/src/file_io.cpp.s
 .PHONY : src/file_io.cpp.s
 
+src/multiway_merge.o: src/multiway_merge.cpp.o
+
+.PHONY : src/multiway_merge.o
+
+# target to build an object file
+src/multiway_merge.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/operators.dir/build.make CMakeFiles/operators.dir/src/multiway_merge.cpp.o
+.PHONY : src/multiway_merge.cpp.o
+
+src/multiway_merge.i: src/multiway_merge.cpp.i
+
+.PHONY : src/multiway_merge.i
+
+# target to preprocess a source file
+src/multiway_merge.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/operators.dir/build.make CMakeFiles/operators.dir/src/multiway_merge.cpp.i
+.PHONY : src/multiway_merge.cpp.i
+
+src/multiway_merge.s: src/multiway_merge.cpp.s
+
+.PHONY : src/multiway_merge.s
+
+# target to generate assembly for a file
+src/multiway_merge.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/operators.dir/build.make CMakeFiles/operators.dir/src/multiway_merge.cpp.s
+.PHONY : src/multiway_merge.cpp.s
+
 src/one_pass.o: src/one_pass.cpp.o
 
 .PHONY : src/one_pass.o
@@ -292,6 +319,9 @@ help:
 	@echo "... src/file_io.o"
 	@echo "... src/file_io.i"
 	@echo "... src/file_io.s"
+	@echo "... src/multiway_merge.o"
+	@echo "... src/multiway_merge.i"
+	@echo "... src/multiway_merge.s"
 	@echo "... src/one_pass.o"
 	@echo "... src/one_pass.i"
 	@echo "... src/one_pass.s"
