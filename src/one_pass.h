@@ -2,28 +2,24 @@
 // Created by Phoenix Wang on 2022/2/12.
 //
 // one_pass.h
-// one pass algorithm on segment/table
+// one pass algorithm on table
 
-#include <cstdlib>
-#include <sstream>
-#include <iostream>
-#include "segment.h"
-#include "table.h"
 
 #ifndef OPERATORS_ONE_PASS_H
 #define OPERATORS_ONE_PASS_H
 
 
+#include <cstdlib>
+#include <sstream>
+#include <iostream>
+#include "blk_operators.h"
+#include "segment.h"
+#include "table.h"
+
+
 class one_pass {
 public:
-    // block
-    static segment* block_project(segment* buffer, std::vector<std::string> schema);
-    static segment* block_choose(segment* buffer, int (*condition)(std::vector<std::string>));
-    static segment block_sort(segment* buffer, bool (*cmp)(std::vector<std::string>, std::vector<std::string>));
-    static segment* block_product(segment* buf1, segment* buf2);
-    static segment* block_product(segment* buf1, segment* buf2, int row);
-    static segment block_connect(segment* buf1, segment* buf2, int (*condition)(std::vector<std::string>, std::vector<std::string>));
-    static segment* block_connect(segment* buf1, segment* buf2, int row, int (*condition)(std::vector<std::string>, std::vector<std::string>));
+    // block test
     static bool cmp(std::vector<std::string> row1, std::vector<std::string> row2) {
         int total1, total2;
         std::stringstream x1, x2;

@@ -5,17 +5,18 @@
 // read data from files and write data to files
 //
 
+
+#ifndef OPERATORS_FILE_IO_H
+#define OPERATORS_FILE_IO_H
+
+
+#include <fstream>
+#include <string>
 //#include <yaml-cpp/yaml.h>
 #include <json/json.h>
 #include <json/value.h>
 #include <json/writer.h>
 #include <json/reader.h>
-
-#include <fstream>
-#include <string>
-
-#ifndef OPERATORS_FILE_IO_H
-#define OPERATORS_FILE_IO_H
 
 
 class file_io {

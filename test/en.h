@@ -5,10 +5,13 @@
 // data from https://voice.baidu.com/act/newpneumonia/newpneumonia/?from=osari_aladin_banner
 // tanslated by google
 
-#include <vector>
 
 #ifndef OPERATORS_EPIDEMIC_H_E
 #define OPERATORS_EPIDEMIC_H_E
+
+
+#include <vector>
+
 
 std::vector<std::string> epidemic_schema_E = {"region", "new", "cumulative", "cured", "death"};
 std::vector<std::vector<std::string>> row6_E = {

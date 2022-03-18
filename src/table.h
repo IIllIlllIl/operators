@@ -4,6 +4,11 @@
 // table.h
 // table of a relation(#seq.blk)
 
+
+#ifndef OPERATORS_TABLE_H
+#define OPERATORS_TABLE_H
+
+
 #include <string>
 #include <utility>
 #include <fstream>
@@ -12,8 +17,6 @@
 #include <sys/stat.h>
 #include "segment.h"
 
-#ifndef OPERATORS_TABLE_H
-#define OPERATORS_TABLE_H
 #define DISPLAY_GAP 35
 
 

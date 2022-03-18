@@ -4,34 +4,37 @@
 // test.h
 // tests for models
 
-#include <iostream>
-#include <fstream>
-#include <cassert>
-
-#include <sstream>
-/*
-#include <json/json.h>
-#include <json/value.h>
-#include <json/writer.h>
-#include <json/reader.h>
-#include <yaml-cpp/yaml.h>
-*/
-
-#include "../src/file_io.h"
-#include "../src/segment.h"
-#include "../test/epidemic.h"
-#include "../test/en.h"
-#include "../src/one_pass.h"
-#include "../src/table.h"
 
 #ifndef OPERATORS_TEST_H
 #define OPERATORS_TEST_H
+
+
+#include <iostream>
+#include <fstream>
+#include <cassert>
+#include <sstream>
+#include "../test/test_data.h"
+#include "../lib/operators.h"
+
+
 #define c(x) std::cout<<#x<<": "<<x<<std::endl
 
 
 class test {
 public:
     // json part
+    // test of multiway merge (based on json)
+    int test_mm_js() {
+        std::string path0 = "../test/json/table/t0";
+        table t0(path0, 16);
+        multiway_merge::sort(&t0, one_pass::cmp)->display();
+        // t0.display();
+        // c(t0.getBlock(0)->read_row(0)[0]);
+        // c(t0.getBlock(1)->read_row(0)[0]);
+
+        return 0;
+    }
+    // test of table (based on json)
     int test_table_js() {
         /*
         std::string path = "../test/simples/table/tb1";
@@ -46,7 +49,7 @@ public:
 
         std::string path0 = "../test/json/table/t0";
         table t0(path0, 16);
-        // one_pass::project(&t0, {"region", "new"})->display();
+        one_pass::project(&t0, {"region", "new"})->display();
         one_pass::choose(&t0, testCondition)->display();
         return 0;
     }
@@ -107,9 +110,9 @@ public:
         segment s0(schema0, 16);c(s0.add_rows(row60));
         segment s1(schema1, 16);c(s1.add_rows(row61));
         segment s2(schema2, 32);c(s2.add_rows(row62));
-        // one_pass::block_product(&s0, &s2).display();
-        // one_pass::block_product(&s1, &s2).display();
-        one_pass::block_connect(&s1, &s2, one_pass::equal).display();
+        // blk_operators::block_product(&s0, &s2).display();
+        // blk_operators::block_product(&s1, &s2).display();
+        blk_operators::block_connect(&s1, &s2, one_pass::equal).display();
 
         return 0;
     }
@@ -159,41 +162,30 @@ public:
     {
         Json::Reader reader;
         Json::Value rootValue;
-        if (!reader.parse(document, rootValue))
-        {
+        if (!reader.parse(document, rootValue)) {
             return;
         }
 
-        if (!rootValue.isObject())
-        {
+        if (!rootValue.isObject()) {
             return;
         }
 
-        if (rootValue.isMember("encoding") && rootValue["encoding"].isString())
-        {
+        if (rootValue.isMember("encoding") && rootValue["encoding"].isString()) {
             printf("encoding is %s \n", rootValue["encoding"].asString().c_str());
         }
 
-        if (rootValue.isMember("plug-ins") && rootValue["plug-ins"].isArray())
-        {
-            for (Json::ArrayIndex i = 0; i < rootValue["plug-ins"].size(); ++i)
-            {
-                if (rootValue["plug-ins"][i].isString())
-                {
+        if (rootValue.isMember("plug-ins") && rootValue["plug-ins"].isArray()) {
+            for (Json::ArrayIndex i = 0; i < rootValue["plug-ins"].size(); ++i) {
+                if (rootValue["plug-ins"][i].isString()) {
                     printf("plug-ins %d : %s \n", i, rootValue["plug-ins"][i].asString().c_str());
                 }
             }
         }
-
-        if (rootValue.isMember("indent") && rootValue["indent"].isObject())
-        {
-            if (rootValue["indent"].isMember("length") && rootValue["indent"]["length"].isInt())
-            {
+        if (rootValue.isMember("indent") && rootValue["indent"].isObject()) {
+            if (rootValue["indent"].isMember("length") && rootValue["indent"]["length"].isInt()) {
                 printf("indent length is %d \n", rootValue["indent"]["length"].asInt());
             }
-
-            if (rootValue["indent"].isMember("use_space") && rootValue["indent"]["use_space"].isBool())
-            {
+            if (rootValue["indent"].isMember("use_space") && rootValue["indent"]["use_space"].isBool()) {
                 printf("indent use_space is %s \n", rootValue["indent"]["use_space"].asBool() ? "true":"false");
             }
         }

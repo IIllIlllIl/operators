@@ -169,6 +169,33 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/operators.dir/build.make CMakeFiles/operators.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/blk_operators.o: src/blk_operators.cpp.o
+
+.PHONY : src/blk_operators.o
+
+# target to build an object file
+src/blk_operators.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/operators.dir/build.make CMakeFiles/operators.dir/src/blk_operators.cpp.o
+.PHONY : src/blk_operators.cpp.o
+
+src/blk_operators.i: src/blk_operators.cpp.i
+
+.PHONY : src/blk_operators.i
+
+# target to preprocess a source file
+src/blk_operators.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/operators.dir/build.make CMakeFiles/operators.dir/src/blk_operators.cpp.i
+.PHONY : src/blk_operators.cpp.i
+
+src/blk_operators.s: src/blk_operators.cpp.s
+
+.PHONY : src/blk_operators.s
+
+# target to generate assembly for a file
+src/blk_operators.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/operators.dir/build.make CMakeFiles/operators.dir/src/blk_operators.cpp.s
+.PHONY : src/blk_operators.cpp.s
+
 src/file_io.o: src/file_io.cpp.o
 
 .PHONY : src/file_io.o
@@ -316,6 +343,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/blk_operators.o"
+	@echo "... src/blk_operators.i"
+	@echo "... src/blk_operators.s"
 	@echo "... src/file_io.o"
 	@echo "... src/file_io.i"
 	@echo "... src/file_io.s"

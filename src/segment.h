@@ -4,18 +4,23 @@
 // segment.h
 // a segment of a table, which should be small enough for memory
 
+
+#ifndef OPERATORS_SEGMENT_H
+#define OPERATORS_SEGMENT_H
+
+
+#include <vector>
+#include <string>
+#include "file_io.h"
 //#include <yaml-cpp/yaml.h>
 #include <json/json.h>
 #include <json/value.h>
 #include <json/writer.h>
 #include <json/reader.h>
-#include <vector>
-#include <string>
-#include "file_io.h"
 
-#ifndef OPERATORS_SEGMENT_H
-#define OPERATORS_SEGMENT_H
+
 #define MAX 32
+
 
 /* yaml
 class segment {

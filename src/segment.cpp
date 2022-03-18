@@ -130,14 +130,14 @@ int segment::read_node(std::string path) {
 
 // json
 segment::segment(std::vector<std::string> data) {
-    for (int i = 0; i < data.size(); i++){
+    for (int i = 0; i < data.size(); i++) {
         schema.push_back(data[i]);
         seg["$schema"].append(data[i]);
     }
     seg["$max"] = max;
 }
 segment::segment(std::vector<std::string> data, int val) {
-    for (int i = 0; i < data.size(); i++){
+    for (int i = 0; i < data.size(); i++) {
         schema.push_back(data[i]);
         seg["$schema"].append(data[i]);
     }

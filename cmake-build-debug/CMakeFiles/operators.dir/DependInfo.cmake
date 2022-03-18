@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/usr/prog/C_C++/operators/main.cpp" "/Users/usr/prog/C_C++/operators/cmake-build-debug/CMakeFiles/operators.dir/main.cpp.o"
+  "/Users/usr/prog/C_C++/operators/src/blk_operators.cpp" "/Users/usr/prog/C_C++/operators/cmake-build-debug/CMakeFiles/operators.dir/src/blk_operators.cpp.o"
   "/Users/usr/prog/C_C++/operators/src/file_io.cpp" "/Users/usr/prog/C_C++/operators/cmake-build-debug/CMakeFiles/operators.dir/src/file_io.cpp.o"
   "/Users/usr/prog/C_C++/operators/src/multiway_merge.cpp" "/Users/usr/prog/C_C++/operators/cmake-build-debug/CMakeFiles/operators.dir/src/multiway_merge.cpp.o"
   "/Users/usr/prog/C_C++/operators/src/one_pass.cpp" "/Users/usr/prog/C_C++/operators/cmake-build-debug/CMakeFiles/operators.dir/src/one_pass.cpp.o"
