@@ -223,6 +223,33 @@ src/file_io.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/operators.dir/build.make CMakeFiles/operators.dir/src/file_io.cpp.s
 .PHONY : src/file_io.cpp.s
 
+src/index_based.o: src/index_based.cpp.o
+
+.PHONY : src/index_based.o
+
+# target to build an object file
+src/index_based.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/operators.dir/build.make CMakeFiles/operators.dir/src/index_based.cpp.o
+.PHONY : src/index_based.cpp.o
+
+src/index_based.i: src/index_based.cpp.i
+
+.PHONY : src/index_based.i
+
+# target to preprocess a source file
+src/index_based.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/operators.dir/build.make CMakeFiles/operators.dir/src/index_based.cpp.i
+.PHONY : src/index_based.cpp.i
+
+src/index_based.s: src/index_based.cpp.s
+
+.PHONY : src/index_based.s
+
+# target to generate assembly for a file
+src/index_based.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/operators.dir/build.make CMakeFiles/operators.dir/src/index_based.cpp.s
+.PHONY : src/index_based.cpp.s
+
 src/multiway_merge.o: src/multiway_merge.cpp.o
 
 .PHONY : src/multiway_merge.o
@@ -349,6 +376,9 @@ help:
 	@echo "... src/file_io.o"
 	@echo "... src/file_io.i"
 	@echo "... src/file_io.s"
+	@echo "... src/index_based.o"
+	@echo "... src/index_based.i"
+	@echo "... src/index_based.s"
 	@echo "... src/multiway_merge.o"
 	@echo "... src/multiway_merge.i"
 	@echo "... src/multiway_merge.s"

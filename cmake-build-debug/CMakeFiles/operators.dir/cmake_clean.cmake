@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/operators.dir/main.cpp.o"
   "CMakeFiles/operators.dir/src/blk_operators.cpp.o"
   "CMakeFiles/operators.dir/src/file_io.cpp.o"
+  "CMakeFiles/operators.dir/src/index_based.cpp.o"
   "CMakeFiles/operators.dir/src/multiway_merge.cpp.o"
   "CMakeFiles/operators.dir/src/one_pass.cpp.o"
   "CMakeFiles/operators.dir/src/segment.cpp.o"

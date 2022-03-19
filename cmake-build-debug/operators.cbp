@@ -100,6 +100,12 @@
 		<Unit filename="/Users/usr/prog/C_C++/operators/src/file_io.h">
 			<Option target="operators"/>
 		</Unit>
+		<Unit filename="/Users/usr/prog/C_C++/operators/src/index_based.cpp">
+			<Option target="operators"/>
+		</Unit>
+		<Unit filename="/Users/usr/prog/C_C++/operators/src/index_based.h">
+			<Option target="operators"/>
+		</Unit>
 		<Unit filename="/Users/usr/prog/C_C++/operators/src/multiway_merge.cpp">
 			<Option target="operators"/>
 		</Unit>

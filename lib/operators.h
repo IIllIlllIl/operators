@@ -14,5 +14,6 @@
 #include "../src/one_pass.h"
 #include "../src/table.h"
 #include "../src/multiway_merge.h"
+#include "../src/index_based.h"
 
 #endif //OPERATORS_OPERATORS_H
