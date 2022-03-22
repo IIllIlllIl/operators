@@ -6,6 +6,28 @@
 
 #IncludeRegexTransform: 
 
+/Users/usr/prog/C_C++/operators/lib/operators.h
+../src/file_io.h
+/Users/usr/prog/C_C++/operators/src/file_io.h
+../src/segment.h
+/Users/usr/prog/C_C++/operators/src/segment.h
+../src/blk_operators.h
+/Users/usr/prog/C_C++/operators/src/blk_operators.h
+../src/one_pass.h
+/Users/usr/prog/C_C++/operators/src/one_pass.h
+../src/table.h
+/Users/usr/prog/C_C++/operators/src/table.h
+../src/multiway_merge.h
+/Users/usr/prog/C_C++/operators/src/multiway_merge.h
+../src/index_based.h
+/Users/usr/prog/C_C++/operators/src/index_based.h
+
+/Users/usr/prog/C_C++/operators/main.cpp
+iostream
+-
+test/test.h
+/Users/usr/prog/C_C++/operators/test/test.h
+
 /Users/usr/prog/C_C++/operators/src/blk_operators.h
 segment.h
 /Users/usr/prog/C_C++/operators/src/segment.h
@@ -30,9 +52,9 @@ json/writer.h
 json/reader.h
 -
 
-/Users/usr/prog/C_C++/operators/src/multiway_merge.cpp
-multiway_merge.h
-/Users/usr/prog/C_C++/operators/src/multiway_merge.h
+/Users/usr/prog/C_C++/operators/src/index_based.h
+one_pass.h
+/Users/usr/prog/C_C++/operators/src/one_pass.h
 
 /Users/usr/prog/C_C++/operators/src/multiway_merge.h
 one_pass.h
@@ -83,6 +105,34 @@ sys/stat.h
 -
 segment.h
 /Users/usr/prog/C_C++/operators/src/segment.h
+
+/Users/usr/prog/C_C++/operators/test/en.h
+vector
+-
+
+/Users/usr/prog/C_C++/operators/test/epidemic.h
+vector
+-
+
+/Users/usr/prog/C_C++/operators/test/test.h
+iostream
+-
+fstream
+-
+cassert
+-
+sstream
+-
+../test/test_data.h
+/Users/usr/prog/C_C++/operators/test/test_data.h
+../lib/operators.h
+/Users/usr/prog/C_C++/operators/lib/operators.h
+
+/Users/usr/prog/C_C++/operators/test/test_data.h
+epidemic.h
+/Users/usr/prog/C_C++/operators/test/epidemic.h
+en.h
+/Users/usr/prog/C_C++/operators/test/en.h
 
 /opt/homebrew/Cellar/jsoncpp/1.9.4_1/include/json/allocator.h
 cstring

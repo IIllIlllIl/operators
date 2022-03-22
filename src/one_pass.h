@@ -2,7 +2,7 @@
 // Created by Phoenix Wang on 2022/2/12.
 //
 // one_pass.h
-// one pass algorithm on table
+// one pass algorithm
 
 
 #ifndef OPERATORS_ONE_PASS_H
@@ -51,7 +51,8 @@ public:
     static table * project(table *t0, std::vector<std::string> schema);
     static table * choose(table *t0, int (*condition)(std::vector<std::string>));
     static table * product(table *table0, table *table1);
-    static table * connect(table *table0, table *table1, int (*condition)(std::vector<std::string>, std::vector<std::string>));
+    static table * connect(table *table0, table *table1,
+                           int (*condition)(std::vector<std::string>, std::vector<std::string>));
     static table * deduplicate (table * t0);
 };
 

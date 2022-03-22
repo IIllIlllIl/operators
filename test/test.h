@@ -23,8 +23,47 @@
 class test {
 public:
     // json part
+
+    // test of test
+    int test_of_find() {
+        table t("../test/json/index/t1", 16);
+        std::vector<std::vector<std::string>> res;
+
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 32; j++) {
+                res = testFind(t.getBlock(i)->read_row(j));
+                for (int k = 0; k < 3; k++) {
+                    std::cout << res[0][k] << " ";
+                }
+                std::cout << std::endl;
+            }
+        }
+        return 0;
+    }
+    // find
+    static std::vector<std::vector<std::string>> testFind(std::vector<std::string> vec) {
+        std::vector<std::vector<std::string>> res;
+        std::vector<std::string> row;
+        table t("../test/json/index/t2", 16);
+        std::stringstream x;
+        int num;
+        x << vec[2];
+        x >> num;
+
+        for (int i = 0 ; i < testIndex.size(); i++) {
+            if (testIndex[i][0] == num) {
+                row = t.getBlock(testIndex[i][1])->read_row(testIndex[i][2]);
+                res.push_back(row);
+            }
+        }
+
+        return res;
+    }
     // test of index based
     int test_index_based() {
+        table t1("../test/json/index/t1", 16);
+        table t2("../test/json/index/t2", 16);
+        index_based::connect(&t1, &t2, testFind)->display();
         return 0;
     }
     // test of multiway merge (based on json)
