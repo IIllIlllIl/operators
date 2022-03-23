@@ -10,15 +10,19 @@
 
 
 #include "one_pass.h"
+#include <pthread.h>
+#include <thread>
 
 
 class multiway_merge {
 private:
     static table* p_sort(table* table, bool (*cmp)(std::vector<std::string>, std::vector<std::string>));
+    static void blk_sort(table* t0, table* srt, int blk_num,
+                         bool (*cmp)(std::vector<std::string>, std::vector<std::string>));
 public:
     static table* sort(table* table, bool (*cmp)(std::vector<std::string>, std::vector<std::string>));
     static table* sort_pthread(table* table, bool (*cmp)(std::vector<std::string>, std::vector<std::string>));
-    static table* connect_multi(table *table0, table *table1,
+    static table* connect(table *table0, table *table1,
                                  bool (*cmp_table0)(std::vector<std::string>, std::vector<std::string>),
                                  bool (*cmp_table1)(std::vector<std::string>, std::vector<std::string>),
                                  bool (*cmp)(std::vector<std::string>, std::vector<std::string>),

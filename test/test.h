@@ -71,10 +71,13 @@ public:
         std::string path0 = "../test/json/table/t0";
         std::string path1 = "../test/json/table/t1";
         std::string path2 = "../test/json/table/t2";
+        std::string pathp = "../test/json/pthread/t0";
         table t0(path0, 16);
         table t1(path1, 16);
         table t2(path2, 16);
+        table tp(pathp, 16);
         // multiway_merge::sort(&t0, one_pass::cmp)->display();
+        multiway_merge::sort_pthread(&tp, one_pass::cmp)->display();
         // t0.display();
         // c(t0.getBlock(0)->read_row(0)[0]);
         // c(t0.getBlock(1)->read_row(0)[0]);
@@ -82,9 +85,10 @@ public:
         // generate test data of connect
         // one_pass::project(&t0, {"region", "new", "cumulative"});
         // one_pass::project(&t0, {"cumulative", "cured", "death"});
-        multiway_merge::connect_multi(&t1, &t2,
+        /*
+        multiway_merge::connect(&t1, &t2,
                                       multiway_merge::cmp0, multiway_merge::cmp1, multiway_merge::cmp,
-                                      one_pass::equal)->display();
+                                      one_pass::equal)->display();*/
 
         return 0;
     }

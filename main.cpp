@@ -4,7 +4,7 @@
 int main() {
     test t;
 
-    t.test_index_based();
+    t.test_mm_js();
 
     return 0;
 }
