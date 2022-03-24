@@ -11,6 +11,8 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/usr/prog/C_C++/operators/src/multiway_merge.cpp" "/Users/usr/prog/C_C++/operators/cmake-build-debug/CMakeFiles/operators.dir/src/multiway_merge.cpp.o"
   "/Users/usr/prog/C_C++/operators/src/one_pass.cpp" "/Users/usr/prog/C_C++/operators/cmake-build-debug/CMakeFiles/operators.dir/src/one_pass.cpp.o"
   "/Users/usr/prog/C_C++/operators/src/segment.cpp" "/Users/usr/prog/C_C++/operators/cmake-build-debug/CMakeFiles/operators.dir/src/segment.cpp.o"
+  "/Users/usr/prog/C_C++/operators/src/stream/stream_choose.cpp" "/Users/usr/prog/C_C++/operators/cmake-build-debug/CMakeFiles/operators.dir/src/stream/stream_choose.cpp.o"
+  "/Users/usr/prog/C_C++/operators/src/stream/stream_project.cpp" "/Users/usr/prog/C_C++/operators/cmake-build-debug/CMakeFiles/operators.dir/src/stream/stream_project.cpp.o"
   "/Users/usr/prog/C_C++/operators/src/table.cpp" "/Users/usr/prog/C_C++/operators/cmake-build-debug/CMakeFiles/operators.dir/src/table.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")

@@ -180,6 +180,32 @@ CMakeFiles/operators.dir/src/index_based.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/operators.dir/src/index_based.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/usr/prog/C_C++/operators/src/index_based.cpp -o CMakeFiles/operators.dir/src/index_based.cpp.s
 
+CMakeFiles/operators.dir/src/stream/stream_project.cpp.o: CMakeFiles/operators.dir/flags.make
+CMakeFiles/operators.dir/src/stream/stream_project.cpp.o: ../src/stream/stream_project.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/usr/prog/C_C++/operators/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/operators.dir/src/stream/stream_project.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/operators.dir/src/stream/stream_project.cpp.o -c /Users/usr/prog/C_C++/operators/src/stream/stream_project.cpp
+
+CMakeFiles/operators.dir/src/stream/stream_project.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/operators.dir/src/stream/stream_project.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/usr/prog/C_C++/operators/src/stream/stream_project.cpp > CMakeFiles/operators.dir/src/stream/stream_project.cpp.i
+
+CMakeFiles/operators.dir/src/stream/stream_project.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/operators.dir/src/stream/stream_project.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/usr/prog/C_C++/operators/src/stream/stream_project.cpp -o CMakeFiles/operators.dir/src/stream/stream_project.cpp.s
+
+CMakeFiles/operators.dir/src/stream/stream_choose.cpp.o: CMakeFiles/operators.dir/flags.make
+CMakeFiles/operators.dir/src/stream/stream_choose.cpp.o: ../src/stream/stream_choose.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/usr/prog/C_C++/operators/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/operators.dir/src/stream/stream_choose.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/operators.dir/src/stream/stream_choose.cpp.o -c /Users/usr/prog/C_C++/operators/src/stream/stream_choose.cpp
+
+CMakeFiles/operators.dir/src/stream/stream_choose.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/operators.dir/src/stream/stream_choose.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/usr/prog/C_C++/operators/src/stream/stream_choose.cpp > CMakeFiles/operators.dir/src/stream/stream_choose.cpp.i
+
+CMakeFiles/operators.dir/src/stream/stream_choose.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/operators.dir/src/stream/stream_choose.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/usr/prog/C_C++/operators/src/stream/stream_choose.cpp -o CMakeFiles/operators.dir/src/stream/stream_choose.cpp.s
+
 # Object files for target operators
 operators_OBJECTS = \
 "CMakeFiles/operators.dir/main.cpp.o" \
@@ -189,7 +215,9 @@ operators_OBJECTS = \
 "CMakeFiles/operators.dir/src/table.cpp.o" \
 "CMakeFiles/operators.dir/src/multiway_merge.cpp.o" \
 "CMakeFiles/operators.dir/src/blk_operators.cpp.o" \
-"CMakeFiles/operators.dir/src/index_based.cpp.o"
+"CMakeFiles/operators.dir/src/index_based.cpp.o" \
+"CMakeFiles/operators.dir/src/stream/stream_project.cpp.o" \
+"CMakeFiles/operators.dir/src/stream/stream_choose.cpp.o"
 
 # External object files for target operators
 operators_EXTERNAL_OBJECTS =
@@ -202,12 +230,14 @@ operators: CMakeFiles/operators.dir/src/table.cpp.o
 operators: CMakeFiles/operators.dir/src/multiway_merge.cpp.o
 operators: CMakeFiles/operators.dir/src/blk_operators.cpp.o
 operators: CMakeFiles/operators.dir/src/index_based.cpp.o
+operators: CMakeFiles/operators.dir/src/stream/stream_project.cpp.o
+operators: CMakeFiles/operators.dir/src/stream/stream_choose.cpp.o
 operators: CMakeFiles/operators.dir/build.make
 operators: /opt/homebrew/Cellar/jsoncpp/1.9.4_1/lib/libjsoncpp.24.dylib
 operators: /opt/homebrew/Cellar/jsoncpp/1.9.4_1/lib/libjsoncpp.dylib
 operators: /usr/local/lib/libyaml-cpp.a
 operators: CMakeFiles/operators.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/usr/prog/C_C++/operators/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable operators"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/usr/prog/C_C++/operators/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable operators"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/operators.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

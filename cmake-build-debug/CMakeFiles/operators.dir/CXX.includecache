@@ -21,6 +21,12 @@
 /Users/usr/prog/C_C++/operators/src/multiway_merge.h
 ../src/index_based.h
 /Users/usr/prog/C_C++/operators/src/index_based.h
+../src/stream.h
+/Users/usr/prog/C_C++/operators/src/stream.h
+../src/stream/stream_project.h
+/Users/usr/prog/C_C++/operators/src/stream/stream_project.h
+../src/stream/stream_choose.h
+/Users/usr/prog/C_C++/operators/src/stream/stream_choose.h
 
 /Users/usr/prog/C_C++/operators/main.cpp
 iostream
@@ -52,6 +58,10 @@ json/writer.h
 json/reader.h
 -
 
+/Users/usr/prog/C_C++/operators/src/index_based.cpp
+index_based.h
+/Users/usr/prog/C_C++/operators/src/index_based.h
+
 /Users/usr/prog/C_C++/operators/src/index_based.h
 one_pass.h
 /Users/usr/prog/C_C++/operators/src/one_pass.h
@@ -68,6 +78,12 @@ pthread.h
 thread
 -
 
+/Users/usr/prog/C_C++/operators/src/one_pass.cpp
+set
+-
+one_pass.h
+/Users/usr/prog/C_C++/operators/src/one_pass.h
+
 /Users/usr/prog/C_C++/operators/src/one_pass.h
 cstdlib
 -
@@ -75,12 +91,14 @@ sstream
 -
 iostream
 -
+thread
+-
 blk_operators.h
 /Users/usr/prog/C_C++/operators/src/blk_operators.h
 segment.h
 /Users/usr/prog/C_C++/operators/src/segment.h
-table.h
-/Users/usr/prog/C_C++/operators/src/table.h
+stream.h
+/Users/usr/prog/C_C++/operators/src/stream.h
 
 /Users/usr/prog/C_C++/operators/src/segment.h
 vector
@@ -97,6 +115,32 @@ json/writer.h
 -
 json/reader.h
 -
+
+/Users/usr/prog/C_C++/operators/src/stream.h
+table.h
+/Users/usr/prog/C_C++/operators/src/table.h
+blk_operators.h
+/Users/usr/prog/C_C++/operators/src/blk_operators.h
+
+/Users/usr/prog/C_C++/operators/src/stream/stream_choose.cpp
+stream_choose.h
+/Users/usr/prog/C_C++/operators/src/stream/stream_choose.h
+
+/Users/usr/prog/C_C++/operators/src/stream/stream_choose.h
+../stream.h
+/Users/usr/prog/C_C++/operators/src/stream.h
+
+/Users/usr/prog/C_C++/operators/src/stream/stream_project.cpp
+stream_project.h
+/Users/usr/prog/C_C++/operators/src/stream/stream_project.h
+
+/Users/usr/prog/C_C++/operators/src/stream/stream_project.h
+../stream.h
+/Users/usr/prog/C_C++/operators/src/stream.h
+
+/Users/usr/prog/C_C++/operators/src/table.cpp
+table.h
+/Users/usr/prog/C_C++/operators/src/table.h
 
 /Users/usr/prog/C_C++/operators/src/table.h
 string

@@ -124,6 +124,21 @@
 		<Unit filename="/Users/usr/prog/C_C++/operators/src/segment.h">
 			<Option target="operators"/>
 		</Unit>
+		<Unit filename="/Users/usr/prog/C_C++/operators/src/stream.h">
+			<Option target="operators"/>
+		</Unit>
+		<Unit filename="/Users/usr/prog/C_C++/operators/src/stream/stream_choose.cpp">
+			<Option target="operators"/>
+		</Unit>
+		<Unit filename="/Users/usr/prog/C_C++/operators/src/stream/stream_choose.h">
+			<Option target="operators"/>
+		</Unit>
+		<Unit filename="/Users/usr/prog/C_C++/operators/src/stream/stream_project.cpp">
+			<Option target="operators"/>
+		</Unit>
+		<Unit filename="/Users/usr/prog/C_C++/operators/src/stream/stream_project.h">
+			<Option target="operators"/>
+		</Unit>
 		<Unit filename="/Users/usr/prog/C_C++/operators/src/table.cpp">
 			<Option target="operators"/>
 		</Unit>

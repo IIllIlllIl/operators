@@ -126,5 +126,24 @@ table *one_pass::deduplicate(table *t0) {
     return res;
 }
 
+table *one_pass::stream_operators(table *t, std::vector<stream*> op) {
+    table* res = new table(t->getPath() + ".res", t->getSchema(), t->getDefaultMax(), t->getMaxBlk());
+    segment* blk;
+    int size = t->getCurrentSeq();
+
+    for (int i = 0; i < size; i++) {
+        // processing each block
+        blk = t->getBlock(i);
+        for (int j = 0; j < op.size(); j++) {
+            blk = op[j]->op(blk);
+        }
+        res->addBlock(blk);
+    }
+    res->setSchema(blk->get_schema());
+
+    return res;
+}
+
+
 
 

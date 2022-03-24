@@ -6,6 +6,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/operators.dir/src/multiway_merge.cpp.o"
   "CMakeFiles/operators.dir/src/one_pass.cpp.o"
   "CMakeFiles/operators.dir/src/segment.cpp.o"
+  "CMakeFiles/operators.dir/src/stream/stream_choose.cpp.o"
+  "CMakeFiles/operators.dir/src/stream/stream_project.cpp.o"
   "CMakeFiles/operators.dir/src/table.cpp.o"
   "operators"
   "operators.pdb"

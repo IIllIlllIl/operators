@@ -15,5 +15,8 @@
 #include "../src/table.h"
 #include "../src/multiway_merge.h"
 #include "../src/index_based.h"
+#include "../src/stream.h"
+#include "../src/stream/stream_project.h"
+#include "../src/stream/stream_choose.h"
 
 #endif //OPERATORS_OPERATORS_H

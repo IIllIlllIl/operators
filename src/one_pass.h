@@ -12,9 +12,10 @@
 #include <cstdlib>
 #include <sstream>
 #include <iostream>
+#include <thread>
 #include "blk_operators.h"
 #include "segment.h"
-#include "table.h"
+#include "stream.h"
 
 
 class one_pass {
@@ -54,6 +55,7 @@ public:
     static table * connect(table *table0, table *table1,
                            int (*condition)(std::vector<std::string>, std::vector<std::string>));
     static table * deduplicate (table * t0);
+    static table * stream_operators(table* t, std::vector<stream*> op);
 };
 
 #endif //OPERATORS_ONE_PASS_H

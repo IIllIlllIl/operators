@@ -331,6 +331,60 @@ src/segment.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/operators.dir/build.make CMakeFiles/operators.dir/src/segment.cpp.s
 .PHONY : src/segment.cpp.s
 
+src/stream/stream_choose.o: src/stream/stream_choose.cpp.o
+
+.PHONY : src/stream/stream_choose.o
+
+# target to build an object file
+src/stream/stream_choose.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/operators.dir/build.make CMakeFiles/operators.dir/src/stream/stream_choose.cpp.o
+.PHONY : src/stream/stream_choose.cpp.o
+
+src/stream/stream_choose.i: src/stream/stream_choose.cpp.i
+
+.PHONY : src/stream/stream_choose.i
+
+# target to preprocess a source file
+src/stream/stream_choose.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/operators.dir/build.make CMakeFiles/operators.dir/src/stream/stream_choose.cpp.i
+.PHONY : src/stream/stream_choose.cpp.i
+
+src/stream/stream_choose.s: src/stream/stream_choose.cpp.s
+
+.PHONY : src/stream/stream_choose.s
+
+# target to generate assembly for a file
+src/stream/stream_choose.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/operators.dir/build.make CMakeFiles/operators.dir/src/stream/stream_choose.cpp.s
+.PHONY : src/stream/stream_choose.cpp.s
+
+src/stream/stream_project.o: src/stream/stream_project.cpp.o
+
+.PHONY : src/stream/stream_project.o
+
+# target to build an object file
+src/stream/stream_project.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/operators.dir/build.make CMakeFiles/operators.dir/src/stream/stream_project.cpp.o
+.PHONY : src/stream/stream_project.cpp.o
+
+src/stream/stream_project.i: src/stream/stream_project.cpp.i
+
+.PHONY : src/stream/stream_project.i
+
+# target to preprocess a source file
+src/stream/stream_project.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/operators.dir/build.make CMakeFiles/operators.dir/src/stream/stream_project.cpp.i
+.PHONY : src/stream/stream_project.cpp.i
+
+src/stream/stream_project.s: src/stream/stream_project.cpp.s
+
+.PHONY : src/stream/stream_project.s
+
+# target to generate assembly for a file
+src/stream/stream_project.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/operators.dir/build.make CMakeFiles/operators.dir/src/stream/stream_project.cpp.s
+.PHONY : src/stream/stream_project.cpp.s
+
 src/table.o: src/table.cpp.o
 
 .PHONY : src/table.o
@@ -388,6 +442,12 @@ help:
 	@echo "... src/segment.o"
 	@echo "... src/segment.i"
 	@echo "... src/segment.s"
+	@echo "... src/stream/stream_choose.o"
+	@echo "... src/stream/stream_choose.i"
+	@echo "... src/stream/stream_choose.s"
+	@echo "... src/stream/stream_project.o"
+	@echo "... src/stream/stream_project.i"
+	@echo "... src/stream/stream_project.s"
 	@echo "... src/table.o"
 	@echo "... src/table.i"
 	@echo "... src/table.s"

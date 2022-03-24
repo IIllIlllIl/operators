@@ -2,13 +2,19 @@
 // Created by Phoenix Wang on 2022/3/17.
 //
 
+
 #include <set>
 #include "blk_operators.h"
+
 
 segment* blk_operators::block_project(segment* buffer, std::vector<std::string> schema) {
     segment* ret = new segment(schema, buffer->getMax());
     std::vector<std::vector<std::string>> rows;
     std::vector<std::string> vec;
+
+    if (buffer->lines() == 0) {
+        return ret;
+    }
 
     for (int i = 0; i < schema.size(); i++) {
         vec = buffer->read_column(schema[i]);
@@ -36,6 +42,10 @@ segment* blk_operators::block_choose(segment *buffer, int (*condition)(std::vect
     segment* ret  = new segment(buffer->get_schema(), buffer->getMax());
     std::vector<std::string> vec;
 
+    if (buffer->lines() == 0) {
+        return ret;
+    }
+
     for (int i = 0; i < buffer->lines(); i++) {
         vec = buffer->read_row(i);
         // condition() == 0
@@ -51,6 +61,10 @@ segment* blk_operators::block_sort(segment *buffer, bool (*cmp)(std::vector<std:
     segment* ret = new segment(buffer->get_schema(), buffer->getMax());
     std::vector<std::vector<std::string>> vec;
 
+    if (buffer->lines() == 0) {
+        return ret;
+    }
+
     for (int i = 0; i < buffer->lines(); i++) {
         vec.push_back(buffer->read_row(i));
     }
@@ -61,7 +75,7 @@ segment* blk_operators::block_sort(segment *buffer, bool (*cmp)(std::vector<std:
 
     return ret;
 }
-
+/*
 segment* blk_operators::block_product(segment *buf1, segment *buf2) {
     int max;
     int max1 = buf1->getMax();
@@ -98,8 +112,7 @@ segment* blk_operators::block_product(segment *buf1, segment *buf2) {
 
     return ret;
 }
-
-
+*/
 segment* blk_operators::block_product(segment *buf1, segment *buf2, int row) {
     int max;
     int max1 = buf1->getMax();
@@ -115,6 +128,9 @@ segment* blk_operators::block_product(segment *buf1, segment *buf2, int row) {
     // if duplicates exist
     std::set<std::string> vecSet(vec.begin(), vec.end());
     if(vec.size() != vecSet.size()) {
+        return ret;
+    }
+    if (buf1->lines() == 0 || buf2->lines() == 0) {
         return ret;
     }
 
@@ -134,7 +150,7 @@ segment* blk_operators::block_product(segment *buf1, segment *buf2, int row) {
 
     return ret;
 }
-
+/*
 segment blk_operators::block_connect(segment *buf1, segment *buf2,
                                 int (*condition)(std::vector<std::string>, std::vector<std::string>)) {
     int max;
@@ -190,7 +206,7 @@ segment blk_operators::block_connect(segment *buf1, segment *buf2,
 
     return ret;
 }
-
+*/
 segment *blk_operators::block_connect(segment *buf1, segment *buf2, int k,
                                  int (*condition)(std::vector<std::string>, std::vector<std::string>)) {
     int max;
@@ -222,6 +238,10 @@ segment *blk_operators::block_connect(segment *buf1, segment *buf2, int k,
     segment* ret = new segment(vec, max);
     std::vector<std::vector<std::string>> rows;
     std::vector<std::string> data, data0, data1;
+
+    if (buf1->lines() == 0 || buf2->lines() == 0) {
+        return ret;
+    }
 
     data0 = buf1->read_row(k);
     for (int j = 0; j < buf2->lines(); j++) {

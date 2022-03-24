@@ -17,6 +17,7 @@
 #include <sys/stat.h>
 #include "segment.h"
 
+
 #define DISPLAY_GAP 35
 
 
@@ -55,6 +56,10 @@ public:
 
     // set arguments
     inline std::vector<std::string> getSchema() {return schema;}
+    inline void setSchema(std::vector<std::string> str) {
+        schema.clear();
+        schema.insert(schema.end(), str.begin(), str.end());
+    }
     inline void setDefaultMax(int val) {default_max = val;}
     inline int getDefaultMax() const {return default_max;}
     inline void setMaxBlk(int val) {max_blk = val;}

@@ -4,7 +4,7 @@
 int main() {
     test t;
 
-    t.test_mm_js();
+    t.test_stream();
 
     return 0;
 }

@@ -23,7 +23,18 @@
 class test {
 public:
     // json part
+    // test of stream
+    int test_stream() {
+        table t("../test/json/stream/t0", 16);
+        std::vector<stream*> st;
+        stream* p = new stream_choose(testCondition);
+        st.push_back(p);
+        p = new stream_project({"region", "new"});
+        st.push_back(p);
+        one_pass::stream_operators(&t, st)->display();
 
+        return 0;
+    }
     // test of test
     int test_of_find() {
         table t("../test/json/index/t1", 16);
@@ -170,7 +181,7 @@ public:
         segment s2(schema2, 32);c(s2.add_rows(row62));
         // blk_operators::block_product(&s0, &s2).display();
         // blk_operators::block_product(&s1, &s2).display();
-        blk_operators::block_connect(&s1, &s2, one_pass::equal).display();
+        // blk_operators::block_connect(&s1, &s2, one_pass::equal).display();
 
         return 0;
     }
