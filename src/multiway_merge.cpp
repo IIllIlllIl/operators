@@ -27,7 +27,7 @@ table *multiway_merge::sort(table *t0, bool (*cmp)(std::vector<std::string>, std
     // merge
     int flag = 0;
     int lines, index, min_pos;
-    segment* blk_buf = new segment(schema, defaultMax);
+    blk = new segment(schema, defaultMax);
     std::vector<std::string> min;
     while ( flag == 0) {
         // if all blocks are done
@@ -54,10 +54,10 @@ table *multiway_merge::sort(table *t0, bool (*cmp)(std::vector<std::string>, std
                 min = buffer[min_pos];
             }
         }
-        blk_buf->add_row(min);
-        if (blk_buf->lines() >= defaultMax) {
-            res->addBlock(blk_buf);
-            blk_buf = new segment(schema, defaultMax);
+        blk->add_row(min);
+        if (blk->lines() >= defaultMax) {
+            res->addBlock(blk);
+            blk = new segment(schema, defaultMax);
         }
 
         // reload
@@ -73,8 +73,8 @@ table *multiway_merge::sort(table *t0, bool (*cmp)(std::vector<std::string>, std
     }
 
     // add blk_buf to res;
-    if (blk_buf->lines() > 0) {
-        res->addBlock(blk_buf);
+    if (blk->lines() > 0) {
+        res->addBlock(blk);
     }
 
     return res;
@@ -103,7 +103,7 @@ table *multiway_merge::p_sort(table *t0, bool (*cmp)(std::vector<std::string>, s
     // merge
     int flag = 0;
     int lines, index, min_pos;
-    segment* blk_buf = new segment(schema, defaultMax);
+    blk = new segment(schema, defaultMax);
     std::vector<std::string> min;
     while ( flag == 0) {
         // if all blocks are done
@@ -130,10 +130,10 @@ table *multiway_merge::p_sort(table *t0, bool (*cmp)(std::vector<std::string>, s
                 min = buffer[min_pos];
             }
         }
-        blk_buf->add_row(min);
-        if (blk_buf->lines() >= defaultMax) {
-            res->addBlock(blk_buf);
-            blk_buf = new segment(schema, defaultMax);
+        blk->add_row(min);
+        if (blk->lines() >= defaultMax) {
+            res->addBlock(blk);
+            blk = new segment(schema, defaultMax);
         }
 
         // reload
@@ -149,8 +149,8 @@ table *multiway_merge::p_sort(table *t0, bool (*cmp)(std::vector<std::string>, s
     }
 
     // add blk_buf to res;
-    if (blk_buf->lines() > 0) {
-        res->addBlock(blk_buf);
+    if (blk->lines() > 0) {
+        res->addBlock(blk);
     }
 
     return res;
@@ -294,7 +294,7 @@ table *multiway_merge::sort_pthread(table *t0, bool (*cmp)(std::vector<std::stri
     // merge
     int flag = 0;
     int lines, index, min_pos;
-    segment* blk_buf = new segment(schema, defaultMax);
+    blk = new segment(schema, defaultMax);
     std::vector<std::string> min;
     while ( flag == 0) {
         // if all blocks are done
@@ -321,10 +321,10 @@ table *multiway_merge::sort_pthread(table *t0, bool (*cmp)(std::vector<std::stri
                 min = buffer[min_pos];
             }
         }
-        blk_buf->add_row(min);
-        if (blk_buf->lines() >= defaultMax) {
-            res->addBlock(blk_buf);
-            blk_buf = new segment(schema, defaultMax);
+        blk->add_row(min);
+        if (blk->lines() >= defaultMax) {
+            res->addBlock(blk);
+            blk = new segment(schema, defaultMax);
         }
 
         // reload
@@ -340,8 +340,8 @@ table *multiway_merge::sort_pthread(table *t0, bool (*cmp)(std::vector<std::stri
     }
 
     // add blk_buf to res;
-    if (blk_buf->lines() > 0) {
-        res->addBlock(blk_buf);
+    if (blk->lines() > 0) {
+        res->addBlock(blk);
     }
 
     return res;

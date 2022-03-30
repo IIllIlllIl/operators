@@ -1,4 +1,7 @@
 # operators
+
+详见https://github.com/IIllIlllIl/operators.git
+
 该项目实现SQL查询执行中的关系算子部分。
 
 涉及算法如下：

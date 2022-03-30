@@ -74,6 +74,8 @@ public:
     int test_index_based() {
         table t1("../test/json/index/t1", 16);
         table t2("../test/json/index/t2", 16);
+        t1.display();
+        t2.display();
         index_based::connect(&t1, &t2, testFind)->display();
         return 0;
     }
@@ -118,8 +120,16 @@ public:
 
         std::string path0 = "../test/json/table/t0";
         table t0(path0, 16);
-        one_pass::project(&t0, {"region", "new"})->display();
-        one_pass::choose(&t0, testCondition)->display();
+        table td("../test/json/onepass/td", 16);
+        table t1("../test/json/onepass/t1", 16);
+        table t2("../test/json/onepass/t2", 256);
+        table t3("../test/json/onepass/t3", 256);
+        table t4("../test/json/onepass/t4", 16);
+        // one_pass::project(&t1, {"cumulative", "cured", "death"})->display();
+        // one_pass::choose(&t0, testCondition)->display();
+        // one_pass::product(&t2, &t4)->display();
+        // one_pass::connect(&t3, &t4, one_pass::equal)->display();
+        one_pass::deduplicate(&td)->display();
         return 0;
     }
     // test of table

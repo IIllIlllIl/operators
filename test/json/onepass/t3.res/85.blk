@@ -1,0 +1,10 @@
+{
+   "$max" : 32,
+   "$schema" : [ "region", "new", "cumulative", "cured", "death" ],
+   "cumulative" : [ "1393887" ],
+   "cured" : [ "1272871" ],
+   "death" : [ "29162" ],
+   "new" : [ "5196" ],
+   "region" : [ "Pakistan" ]
+}
+
