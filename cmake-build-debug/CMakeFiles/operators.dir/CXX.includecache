@@ -62,6 +62,10 @@ json/reader.h
 one_pass.h
 /Users/usr/prog/C_C++/operators/src/one_pass.h
 
+/Users/usr/prog/C_C++/operators/src/multiway_merge.cpp
+multiway_merge.h
+/Users/usr/prog/C_C++/operators/src/multiway_merge.h
+
 /Users/usr/prog/C_C++/operators/src/multiway_merge.h
 one_pass.h
 /Users/usr/prog/C_C++/operators/src/one_pass.h
