@@ -15,6 +15,7 @@ CMakeFiles/operators.dir/main.cpp.o: ../src/stream/stream_project.h
 CMakeFiles/operators.dir/main.cpp.o: ../src/table.h
 CMakeFiles/operators.dir/main.cpp.o: ../test/en.h
 CMakeFiles/operators.dir/main.cpp.o: ../test/epidemic.h
+CMakeFiles/operators.dir/main.cpp.o: ../test/non-functional.h
 CMakeFiles/operators.dir/main.cpp.o: ../test/test.h
 CMakeFiles/operators.dir/main.cpp.o: ../test/test_data.h
 CMakeFiles/operators.dir/main.cpp.o: /opt/homebrew/Cellar/jsoncpp/1.9.4_1/include/json/allocator.h

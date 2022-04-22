@@ -33,6 +33,8 @@ iostream
 -
 test/test.h
 /Users/usr/prog/C_C++/operators/test/test.h
+test/non-functional.h
+/Users/usr/prog/C_C++/operators/test/non-functional.h
 
 /Users/usr/prog/C_C++/operators/src/blk_operators.h
 segment.h
@@ -61,10 +63,6 @@ json/reader.h
 /Users/usr/prog/C_C++/operators/src/index_based.h
 one_pass.h
 /Users/usr/prog/C_C++/operators/src/one_pass.h
-
-/Users/usr/prog/C_C++/operators/src/multiway_merge.cpp
-multiway_merge.h
-/Users/usr/prog/C_C++/operators/src/multiway_merge.h
 
 /Users/usr/prog/C_C++/operators/src/multiway_merge.h
 one_pass.h
@@ -142,6 +140,24 @@ vector
 
 /Users/usr/prog/C_C++/operators/test/epidemic.h
 vector
+-
+
+/Users/usr/prog/C_C++/operators/test/non-functional.h
+iostream
+-
+fstream
+-
+cassert
+-
+sstream
+-
+../test/test_data.h
+/Users/usr/prog/C_C++/operators/test/test_data.h
+../lib/operators.h
+/Users/usr/prog/C_C++/operators/lib/operators.h
+test.h
+/Users/usr/prog/C_C++/operators/test/test.h
+ctime
 -
 
 /Users/usr/prog/C_C++/operators/test/test.h

@@ -98,6 +98,20 @@ int table::display() {
     return 0;
 }
 
+std::vector<std::vector<std::string>> table::dp() {
+    std::vector<std::vector<std::string>> res;
+    std::vector<std::string> row;
+    for (int i = 0; i < current_seq; i++) {
+        segment* b = getBlock(i);
+        for (int j = 0; j < b->lines(); j ++) {
+            row.clear();
+            row = b->read_row(j);
+            res.push_back(row);
+        }
+    }
+    return res;
+}
+
 std::string table::getDir() {
     std::string::size_type i, j;
 

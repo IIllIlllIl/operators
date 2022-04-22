@@ -53,6 +53,7 @@ public:
 
     // display all info
     int display();
+    std::vector<std::vector<std::string>> dp();
 
     // set arguments
     inline std::vector<std::string> getSchema() {return schema;}
